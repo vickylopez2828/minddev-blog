@@ -1,0 +1,195 @@
+[
+    {
+        "articleContent": [
+            {
+                "id": "heading_one",
+                "tag": "h1",
+                "content": "5 tendencias de SEO que debes dominar en 2025"
+            },
+            {
+                "id": "heading_two",
+                "tag": "h2",
+                "content": "Introducción"
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "El SEO ya no se trata solo de palabras clave o enlaces. En 2025, los motores de búsqueda evolucionan para entender la intención real del usuario, interpretar el contexto y priorizar la calidad de la experiencia digital. Con la llegada de la IA conversacional y los algoritmos más inteligentes, el posicionamiento orgánico se ha convertido en una ciencia estratégica que combina datos, tecnología y contenido humano."
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "En MindDev Perú, analizamos las 5 tendencias más relevantes que marcarán la diferencia en tu estrategia de SEO & Marketing Digital este año."
+            },
+            {
+                "id": "heading_two",
+                "tag": "h2",
+                "content": "1. La IA conversacional transforma el SEO"
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "La inteligencia artificial conversacional —como ChatGPT, Gemini, Copilot y Perplexity— está redefiniendo cómo los usuarios buscan información. Ya no escriben frases exactas, sino preguntas naturales, lo que impulsa la búsqueda semántica."
+            },
+            {
+                "id": "heading_three",
+                "tag": "h3",
+                "content": "¿Qué significa esto para el SEO?"
+            },
+            {
+                "id": "unordered_list",
+                "tag": "ul",
+                "ariaLabel": "Impactos de la IA conversacional en estrategias SEO",
+                "items": [
+                    "Los motores de búsqueda priorizan respuestas útiles, contextuales y completas.",
+                    "El contenido debe estar optimizado para intenciones de búsqueda, no solo palabras clave.",
+                    "La integración con asistentes de voz e IA generativa hace esencial escribir de forma natural y conversacional."
+                ]
+            },
+            {
+                "id": "heading_two",
+                "tag": "h2",
+                "content": "2. La experiencia del usuario (UX) se consolida como factor de ranking"
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "Google ya no solo evalúa el contenido: también cómo se siente navegar tu sitio. Los nuevos indicadores de Core Web Vitals 2025 analizan:"
+            },
+            {
+                "id": "unordered_list",
+                "tag": "ul",
+                "ariaLabel": "Métricas esenciales de experiencia de usuario para SEO",
+                "items": [
+                    "Velocidad de carga interactiva (INP)",
+                    "Estabilidad visual (CLS)",
+                    "Tiempo hasta la primera acción útil"
+                ]
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "Una web rápida, accesible y bien diseñada mejora el tiempo de permanencia..."
+            },
+            {
+                "id": "tip_minddev",
+                "tag": "aside",
+                "content": "Tip MindDev: optimiza el diseño responsive, mejora los tiempos de carga y mantén una arquitectura clara. Recuerda: el SEO y el diseño UX/UI van de la mano"
+            },
+            {
+                "id": "heading_two",
+                "tag": "h2",
+                "content": "3. La búsqueda por voz y los asistentes inteligentes"
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "El auge de los dispositivos con IA y los altavoces inteligentes (Alexa, Google Assistant, Siri, ChatGPT Voice) impulsa la búsqueda por voz. En 2025, más del 50% de las consultas móviles se realizan hablando."
+            },
+            {
+                "id": "heading_three",
+                "tag": "h3",
+                "content": "Cómo adaptarte:"
+            },
+            {
+                "id": "unordered_list",
+                "tag": "ul",
+                "ariaLabel": "Técnicas de adaptación para búsquedas por voz",
+                "items": [
+                    "Usa lenguaje natural y frases completas",
+                    "Crea secciones de tipo FAQ con preguntas y respuestas cortas",
+                    "Optimiza tu contenido para micro-momentos (“cerca de mí”, “cómo hacer”, “cuándo abrir”, etc.)"
+                ]
+            },
+            {
+                "id": "tip_minddev",
+                "tag": "aside",
+                "content": "Tip MindDev: estructura tus textos con marcado Schema FAQ para que los motores lean tus respuestas con precisión."
+            },
+            {
+                "id": "heading_two",
+                "tag": "h2",
+                "content": "4. Contenido generado con IA, pero supervisado por humanos"
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "Las herramientas de IA permiten generar textos, ideas y resúmenes en segundos. Sin embargo, el contenido 100% automatizado pierde autenticidad y valor humano. Google prioriza el contenido E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness)."
+            },
+            {
+                "id": "heading_three",
+                "tag": "h3",
+                "content": "Recomendaciones clave:"
+            },
+            {
+                "id": "unordered_list",
+                "tag": "ul",
+                "ariaLabel": "Recomendaciones para uso ético de IA en contenido",
+                "items": [
+                    "Usa IA como apoyo creativo, no como reemplazo del redactor.",
+                    "Revisa la información, agrega datos reales y experiencias propias.",
+                    "Aporta tu voz y conocimiento del sector."
+                ]
+            },
+            {
+                "id": "tip_minddev",
+                "tag": "aside",
+                "content": "Tip MindDev: combina IA + revisión humana = contenido escalable y de calidad."
+            },
+            {
+                "id": "heading_two",
+                "tag": "h2",
+                "content": "5. SEO técnico y analítica predictiva"
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "El SEO técnico sigue siendo la base invisible del posicionamiento. En 2025, se vuelve más automatizado y orientado a datos gracias a la IA analítica."
+            },
+            {
+                "id": "heading_three",
+                "tag": "h3",
+                "content": "Aspectos clave:"
+            },
+            {
+                "id": "unordered_list",
+                "tag": "ul",
+                "ariaLabel": "Componentes esenciales del SEO técnico moderno",
+                "items": [
+                    "Revisa la indexación inteligente con herramientas como Search Console y Screaming Frog.",
+                    "Implementa datos estructurados (Schema) para mejorar el CTR",
+                    "Aprovecha modelos predictivos para anticipar tendencias de tráfico y comportamiento del usuario"
+                ]
+            },
+            {
+                "id": "tip_minddev",
+                "tag": "aside",
+                "content": "Tip MindDev: monitorea tus KPIs (visitas orgánicas, CTR, conversiones) y ajusta tu estrategia mensualmente"
+            },
+            {
+                "id": "heading_two",
+                "tag": "h2",
+                "content": "Conclusión: el futuro del SEO es humano y tecnológico"
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "El SEO del 2025 combina lo mejor de ambos mundos:"
+            },
+            {
+                "id": "unordered_list",
+                "tag": "ul",
+                "ariaLabel": "Componentes fundamentales del SEO futuro",
+                "items": [
+                    "IA para optimizar y analizar",
+                    "humanos para conectar y emocionar."
+                ]
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "Las marcas que comprendan esta dualidad dominarán los rankings. En MindDev Perú, ayudamos a negocios a implementar estrategias SEO modernas, éticas y efectivas que generan resultados reales."
+            }
+        ]
+    }
+]
