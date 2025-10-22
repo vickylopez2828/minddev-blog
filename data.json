@@ -1,0 +1,147 @@
+ [
+    {
+        "id": "seo",
+        "title": ">**5 tendencias de SEO que debes dominar en 2025**",
+        "metadata": {
+            "author": "Carlos Pérez",
+            "date": "2023-04-01",
+            "description": "Descubre cómo MindDev Perú aplica la metodología ágil para entregar poyectos eficientes, transparentes y de alto impacto. Conoce nuestro proceso de 5 pasos.",
+            "tags": ["Agile", "Metodología Ágil", "MindDev", "Desarrollo de Software"]
+        },
+        "author": "MindDev Perú",
+        "date": "2023-05-10",
+        "introduction": {
+            "paragraph_1": "> El SEO ya no se trata solo de palabras clave o enlaces. En 2025, los motores de búsqueda evolucionan para entender **la intención real del usuario**, interpretar el contexto y priorizar **la calidad de la experiencia digital.** Con la llegada de la **IA conversacional** y los algoritmos más inteligentes, el posicionamiento orgánico se ha convertido en una ciencia estratégica que combina datos, tecnología y contenido humano.",
+            "paragraph_2": "> En **MindDev Perú**, analizamos las 5 tendencias más relevantes que marcarán la diferencia en tu estrategia de **SEO & Marketing Digital** este año."
+        },
+        "section_1": {
+            "title": "**1. La IA conversacional transforma el SEO**",
+            "paragraph": "> La inteligencia artificial conversacional —como **ChatGPT, Gemini, Copilot y Perplexity**— está redefiniendo cómo los usuarios buscan información. <br> Ya no escriben frases exactas, sino preguntas naturales, lo que impulsa la **búsqueda semántica**.",
+            "subtitle": "**¿Qué significa esto para el SEO?**",
+            "list": ["Los motores de búsqueda priorizan **respuestas útiles, contextuales y completas**.", "El contenido debe estar optimizado para **intenciones de búsqueda**, no solo palabras clave.", "La integración con asistentes de voz e IA generativa hace esencial escribir de forma **natural y conversacional**."],
+            "tip": "Tip MindDev: crea contenido que responda directamente a preguntas comunes con subtítulos tipo '¿Cómo...?', “¿Por qué...?” y “¿Cuál es la mejor forma de...?”"
+        },
+        "section_2":{
+            "title": "Nuestro proceso ágil de 5 pasos",
+            "intro": "En MindDev Perú aplicamos un sistema ágil propio, optimizado para desarrollo web, aplicaciones móviles y marketing digital.",
+            "subtitle": "Cada proyecto pasa por estas 5 etapas: ",
+            "items": [
+                {
+                "subtitle": "Análisis y definición",
+                "list": [
+                    "Identificamos los objetivos del cliente, público objetivo y funcionalidades esenciales.",
+                    "Creamos un brief técnico y creativo que guiará todo el proceso."
+                ],
+                "tools": {"list": ["Notion", "Google Docs", "reuniones de kick-off"] , "icon": ""}
+                },
+                {
+                "subtitle": "Diseño y prototipado",
+                "list": [
+                    "Nuestro equipo de UX/UI crea el diseño visual y funcional de la solución.",
+                    "Se elaboran wireframes y prototipos interactivos para validar la experiencia antes del desarrollo."
+                ],
+                "tools":  {"list":["Figma", "Miro"], "icon": ""}
+                },
+                {
+                "subtitle": "Desarrollo iterativo",
+                "list": [
+                    "El equipo implementa funcionalidades por módulos (sprints).",
+                    "Cada sprint tiene entregables y revisiones semanales.",
+                    "Se prioriza el código limpio, escalable y documentado."
+                ],
+                "tools": {"list":["GitHub", "VS Code", "frameworks modernos (React, Flutter, Laravel)"], "icon": ""}
+                },
+                {
+                "subtitle": "Testing y retroalimentación",
+                "list": [
+                    "Antes de lanzar cualquier producto, realizamos pruebas de usabilidad, rendimiento y compatibilidad.",
+                    "Los clientes revisan el avance y brindan feedback directo para ajustar detalles."
+                ],
+                "tools": {"list":["BrowserStack", "Jira", "Google Lighthouse"], "icon": ""}
+                },
+                {
+                "subtitle": "Entrega y mejora continua",
+                "list": [
+                    "Se entrega la versión final y se capacita al cliente para su uso.",
+                    "Implementamos un ciclo de mejoras y mantenimiento basado en métricas reales.",
+                    "Cada proyecto sigue evolucionando incluso después de lanzarse."
+                ]
+                }
+            ],
+            "conclusion": "MindDev no solo entrega proyectos; entrega resultados que crecen contigo."
+        }
+    },
+    {
+        "id": "agile-methodology",
+        "title": "Cómo implementamos la Metodología Ágil en MindDev",
+        "metadata": {
+            "author": "Carlos Pérez",
+            "date": "2023-04-01",
+            "description": "Descubre cómo MindDev Perú aplica la metodología ágil para entregar poyectos eficientes, transparentes y de alto impacto. Conoce nuestro proceso de 5 pasos.",
+            "tags": ["Agile", "Metodología Ágil", "MindDev", "Desarrollo de Software"]
+        },
+        "author": "MindDev Perú",
+        "date": "2023-05-10",
+        "introduction": {
+            "paragraph_1": "En un mundo digital que cambia constantemente, **adaptarse es la clave del éxito**. En **MindDev Perú**, aplicamos la **metodología ágil** para desarrollar soluciones digitales eficientes, escalables y alineadas con las necesidades reales de cada cliente.",
+            "paragraph_2": "Esta forma de trabajo nos permite mantener **una comunicación constante, entregas continuas y resultados medibles**.",
+            "paragraph_3": "Te contamos cómo implementamos nuestro proceso ágil en 5 pasos, asegurando que cada proyecto avance con transparencia y eficiencia."
+        },
+        "section_1": {
+            "title": "1. ¿Qué es la metodología ágil y por qué la usamos?",
+            "paragraph": "La metodología ágil es un enfoque de trabajo que divide los proyectos en pequeñas etapas (sprints), con revisiones y mejoras continuas. En lugar de esperar hasta el final para entregar un producto, el cliente puede ver avances reales en cada fase.",
+            "subtitle": "Sus principios se basan en:",
+            "list": ["Colaboración constante entre equipo y cliente.", "Entrega continua de valor.", "Adaptabilidad ante los cambios.", "Retroalimentación como motor de mejora."],
+            "tip": "En MindDev, usamos esta metodología porque permite reaccionar rápidamente a los cambios del mercado y mantener la calidad en cada desarrollo."
+        },
+        "section_2":{
+            "title": "Nuestro proceso ágil de 5 pasos",
+            "intro": "En MindDev Perú aplicamos un sistema ágil propio, optimizado para desarrollo web, aplicaciones móviles y marketing digital.",
+            "subtitle": "Cada proyecto pasa por estas 5 etapas: ",
+            "items": [
+                {
+                "subtitle": "Análisis y definición",
+                "list": [
+                    "Identificamos los objetivos del cliente, público objetivo y funcionalidades esenciales.",
+                    "Creamos un brief técnico y creativo que guiará todo el proceso."
+                ],
+                "tools": {"list": ["Notion", "Google Docs", "reuniones de kick-off"] , "icon": ""}
+                },
+                {
+                "subtitle": "Diseño y prototipado",
+                "list": [
+                    "Nuestro equipo de UX/UI crea el diseño visual y funcional de la solución.",
+                    "Se elaboran wireframes y prototipos interactivos para validar la experiencia antes del desarrollo."
+                ],
+                "tools":  {"list":["Figma", "Miro"], "icon": ""}
+                },
+                {
+                "subtitle": "Desarrollo iterativo",
+                "list": [
+                    "El equipo implementa funcionalidades por módulos (sprints).",
+                    "Cada sprint tiene entregables y revisiones semanales.",
+                    "Se prioriza el código limpio, escalable y documentado."
+                ],
+                "tools": {"list":["GitHub", "VS Code", "frameworks modernos (React, Flutter, Laravel)"], "icon": ""}
+                },
+                {
+                "subtitle": "Testing y retroalimentación",
+                "list": [
+                    "Antes de lanzar cualquier producto, realizamos pruebas de usabilidad, rendimiento y compatibilidad.",
+                    "Los clientes revisan el avance y brindan feedback directo para ajustar detalles."
+                ],
+                "tools": {"list":["BrowserStack", "Jira", "Google Lighthouse"], "icon": ""}
+                },
+                {
+                "subtitle": "Entrega y mejora continua",
+                "list": [
+                    "Se entrega la versión final y se capacita al cliente para su uso.",
+                    "Implementamos un ciclo de mejoras y mantenimiento basado en métricas reales.",
+                    "Cada proyecto sigue evolucionando incluso después de lanzarse."
+                ]
+                }
+            ],
+            "conclusion": "MindDev no solo entrega proyectos; entrega resultados que crecen contigo."
+        }
+    }
+]
