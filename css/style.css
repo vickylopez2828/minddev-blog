@@ -1,0 +1,73 @@
+/*  ===============================
+                RESET BASE
+    =============================== */
+
+/* Reset de margenes, paddings y box-sizing */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografia y line-height por defecto */
+html {
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+/* Cuerpo del documento */
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/*  ===============================
+            ELEMENTOS BASE
+    =============================== */
+
+    h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+p, li, span, a {
+    font-weight: normal;
+    color: inherit;
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    cursor: pointer;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+/*  ===============================
+            LAYOUT BASE
+    =============================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header, main, footer, section, article, aside {
+    display: block;
+}
