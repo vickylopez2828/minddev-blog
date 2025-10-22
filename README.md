@@ -30,4 +30,4 @@ Proyecto colaborativo de rediseño del blog de MindDev.
 
 - **Diseño Figma:** 
 - **Deploy:** 
-- **Notion:** [https://www.notion.so/Primeros-pasos-292c7926e4b5809bb0f2e7bc5b72f904]
+- **Notion:** [https://www.notion.so/Documentaci-n-T-cnica-292c7926e4b58098affcf053221edcce?source=copy_link]
