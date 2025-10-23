@@ -1,7 +1,5 @@
-async function fetchArticleData() {
+async function fetchArticleData(articleId) {
     try {
-        const urlParams = new URLSearchParams(window.location.search);
-        const articleId = parseInt(urlParams.get('id')) || 1;
 
         const response = await fetch('../data/data.json');
         
@@ -15,8 +13,13 @@ async function fetchArticleData() {
         if (!data) {
             throw new Error('Artículo no encontrado');
         }
+        window.history.pushState({ articleId }, '', `?id=${articleId}`);
+
+        document.title = data.title || 'Blog - MindDev';
+        
         setupNavigation(articleId, dataArray.length);
         displayArticle(data);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -28,32 +31,43 @@ function setupNavigation(currentId, totalArticles) {
     const prevButton = document.getElementById('prev');
     const nextButton = document.getElementById('next');
     
-    // Configurar botón anterior
-    if (prevButton) {
+     if (prevButton) {
+        
+        const newPrevButton = prevButton.cloneNode(true);
+        prevButton.parentNode.replaceChild(newPrevButton, prevButton);
+        
         if (currentId > 1) {
-            prevButton.href = `?id=${currentId - 1}`;
-            prevButton.style.display = 'block';
-            prevButton.style.opacity = '1';
-            prevButton.style.pointerEvents = 'auto';
+            newPrevButton.textContent = 'Artículo Anterior';
+            newPrevButton.style.opacity = '1';
+            newPrevButton.style.pointerEvents = 'auto';
+             newPrevButton.removeAttribute('href');
+            newPrevButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                fetchArticleData(currentId - 1);
+            });
         } else {
-            // Si es el primer artículo, redirigir a home
-            prevButton.href = '/';
-            prevButton.textContent = 'Inicio';
+            newPrevButton.href = '/';
+            newPrevButton.textContent = 'Inicio';
         }
     }
-    
-    // Configurar botón siguiente
-    if (nextButton) {
+
+   if (nextButton) {
+        const newNextButton = nextButton.cloneNode(true);
+        nextButton.parentNode.replaceChild(newNextButton, nextButton);
+        
         if (currentId < totalArticles) {
-            nextButton.href = `?id=${currentId + 1}`;
-            nextButton.style.display = 'block';
-            nextButton.style.opacity = '1';
-            nextButton.style.pointerEvents = 'auto';
+            newNextButton.textContent = 'Artículo Siguiente';
+            newNextButton.style.opacity = '1';
+            newNextButton.style.pointerEvents = 'auto';
+            newNextButton.removeAttribute('href');
+            newNextButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                fetchArticleData(currentId + 1);
+            });
         } else {
-            // Si es el último artículo, ocultar o deshabilitar
-            nextButton.style.opacity = '0.5';
-            nextButton.style.pointerEvents = 'none';
-            nextButton.href = '#';
+            newNextButton.textContent = 'Artículo Siguiente';
+            newNextButton.style.opacity = '0.5';
+            newNextButton.style.pointerEvents = 'none';
         }
     }
 }
@@ -146,6 +160,14 @@ function displayArticle(content) {
     });
 }
 
+window.addEventListener('popstate', (event) => {
+    if (event.state && event.state.articleId) {
+        fetchArticleData(event.state.articleId);
+    }
+});
 
-// Llamar la función
-document.addEventListener('DOMContentLoaded', fetchArticleData);
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const articleId = parseInt(urlParams.get('id')) || 1;
+    fetchArticleData(articleId);
+});
