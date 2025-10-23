@@ -4,10 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tendencias SEO 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
       .article-section {
         margin: 20px 0;
         padding: 10px;
+      }
+      /* estilos momentaneos para tablas */
+      .minddev-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        font-size: 0.95rem;
+      }
+
+      .minddev-table th,
+      .minddev-table td {
+        border: 1px solid #e5e7eb;
+        padding: 0.75rem 1rem;
+        text-align: left;
+      }
+
+      .minddev-table th {
+        background-color: #f3f4f6;
+        font-weight: 600;
+      }
+
+      .minddev-table tr:nth-child(even) {
+        background-color: #fafafa;
       }
       h1 {
         color: #2c3e50;
@@ -21,10 +46,14 @@
     </style>
   </head>
   <body>
+    <nav id="article-navigation" class="flex gap-8">
+      <a id="prev" class="cursor-pointer border-2 rounded-xl p-2 my-4 mx-auto">Articulo Anterior</a>
+      <a id="next" class="cursor-pointer border-2 rounded-xl p-2 my-4 mx-auto">Articulo Siguiente</a>
+    </nav>
     <article id="article-container">
       <!-- Aquí se insertará el contenido dinámicamente -->
     </article>
 
-    <script src="script.js"></script>
+    <script src="/js/index.js"></script>
   </body>
 </html>
