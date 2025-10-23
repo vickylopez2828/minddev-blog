@@ -1,14 +1,21 @@
 async function fetchArticleData() {
     try {
-        const response = await fetch('../data/data.js');
+        const urlParams = new URLSearchParams(window.location.search);
+        const articleId = parseInt(urlParams.get('id')) || 1;
+
+        const response = await fetch('../data/data.json');
         
         if (!response.ok) {
             throw new Error(`Error: ${response.status}`);
         }
         
         const dataArray = await response.json();
-        // Acceder al primer elemento del array
-        const data = dataArray[0];
+        
+        const data = dataArray.find(article => article.id === articleId);
+        if (!data) {
+            throw new Error('Artículo no encontrado');
+        }
+        setupNavigation(articleId, dataArray.length);
         displayArticle(data);
         
     } catch (error) {
@@ -17,7 +24,39 @@ async function fetchArticleData() {
         container.innerHTML = '<p>Error al cargar el contenido.</p>';
     }
 }
-
+function setupNavigation(currentId, totalArticles) {
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+    
+    // Configurar botón anterior
+    if (prevButton) {
+        if (currentId > 1) {
+            prevButton.href = `?id=${currentId - 1}`;
+            prevButton.style.display = 'block';
+            prevButton.style.opacity = '1';
+            prevButton.style.pointerEvents = 'auto';
+        } else {
+            // Si es el primer artículo, redirigir a home
+            prevButton.href = '/';
+            prevButton.textContent = 'Inicio';
+        }
+    }
+    
+    // Configurar botón siguiente
+    if (nextButton) {
+        if (currentId < totalArticles) {
+            nextButton.href = `?id=${currentId + 1}`;
+            nextButton.style.display = 'block';
+            nextButton.style.opacity = '1';
+            nextButton.style.pointerEvents = 'auto';
+        } else {
+            // Si es el último artículo, ocultar o deshabilitar
+            nextButton.style.opacity = '0.5';
+            nextButton.style.pointerEvents = 'none';
+            nextButton.href = '#';
+        }
+    }
+}
 function displayArticle(content) {
     const container = document.getElementById('article-container');
     container.innerHTML = '';
@@ -38,7 +77,8 @@ function displayArticle(content) {
                 if (item.items && Array.isArray(item.items)) {
                     item.items.forEach(listItem => {
                         const li = document.createElement('li');
-                        li.textContent = listItem;
+                        li.innerHTML = marked.parse(listItem);
+                        // li.textContent = listItem;
                         element.appendChild(li);
                     });
                 }
@@ -52,14 +92,50 @@ function displayArticle(content) {
                 element.setAttribute('aria-label', 'Consejo de MindDev');
                 
                 const tipContent = document.createElement('p');
-                tipContent.textContent = item.content;
+                tipContent.innerHTML = marked.parse(item.content);
+                // tipContent.textContent = item.content;
                 element.appendChild(tipContent);
                 break;
-                
+            case 'table':
+                // Crear tabla con cabecera y cuerpo
+                element = document.createElement('table');
+                if (item.ariaLabel) {
+                    element.setAttribute('aria-label', item.ariaLabel);
+                }
+                element.className = 'minddev-table';
+
+                // Crear encabezado
+                if (item.headers && Array.isArray(item.headers)) {
+                    const thead = document.createElement('thead');
+                    const headerRow = document.createElement('tr');
+                    item.headers.forEach(header => {
+                        const th = document.createElement('th');
+                        th.textContent = header;
+                        headerRow.appendChild(th);
+                    });
+                    thead.appendChild(headerRow);
+                    element.appendChild(thead);
+                }
+
+                // Crear cuerpo
+                if (item.rows && Array.isArray(item.rows)) {
+                    const tbody = document.createElement('tbody');
+                    item.rows.forEach(row => {
+                        const tr = document.createElement('tr');
+                        row.forEach(cell => {
+                            const td = document.createElement('td');
+                            td.innerHTML = marked.parse(cell); 
+                            tr.appendChild(td);
+                        });
+                        tbody.appendChild(tr);
+                    });
+                    element.appendChild(tbody);
+                }
+                break;
             default:
                 // Para h1, h2, h3, p, etc.
                 element = document.createElement(item.tag);
-                element.textContent = item.content;
+                element.innerHTML = marked.parse(item.content);
                 if (item.id) {
                     element.id = item.id;
                 }
@@ -69,6 +145,7 @@ function displayArticle(content) {
         container.appendChild(element);
     });
 }
+
 
 // Llamar la función
 document.addEventListener('DOMContentLoaded', fetchArticleData);
