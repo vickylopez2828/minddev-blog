@@ -1,51 +1,171 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tendencias SEO 2025</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <style>
-      .article-section {
-        margin: 20px 0;
-        padding: 10px;
-      }
-      /* estilos momentaneos para tablas */
-      .minddev-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 1.5rem 0;
-        font-size: 0.95rem;
-      }
 
-      .minddev-table th,
-      .minddev-table td {
-        border: 1px solid #e5e7eb;
-        padding: 0.75rem 1rem;
-        text-align: left;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tendencias SEO 2025</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 tendencias de SEO que debes dominar en 2025</title>
 
-      .minddev-table th {
-        background-color: #f3f4f6;
-        font-weight: 600;
+  <!-- Datos estructurados para SEO en formato JSON-LD -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "5 tendencias de SEO que debes dominar en 2025",
+        "description": "En 2025, el SEO evoluciona hacia la IA conversacional, la búsqueda semántica y la experiencia de usuario...",
+        "author": {
+          "@type": "Organization",
+          "name": "MindDev Perú"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "MindDev Perú",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://minddevperu.com/assets/images/logo.png"
+          }
+        },
+        "datePublished": "2024-01-01",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://minddevperu.com/articulo-seo-2025"
+        }
       }
+    </script>
 
-      .minddev-table tr:nth-child(even) {
-        background-color: #fafafa;
-      }
-      h1 {
-        color: #2c3e50;
-      }
-      h2 {
-        color: #34495e;
-      }
-      p {
-        line-height: 1.6;
-      }
-    </style>
-  </head>
-  <body>
+  <!-- CDN de Tailwind y Librería Marked.js -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Configuracion de Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "deep-blue": "#0f172a" /* Fondo */,
+            "electric-blue": "#3b82f6" /* Principal (Celeste) */,
+            "dark-alt": "#0f1a37" /* Fondo secundario (AZUL2) */,
+            "accent-purple": "#5355dd" /* Acento secundario (Morado) */,
+            "white-pure": "#ffffff" /* Texto principal */,
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Tipografía -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/_base.css" />
+
+  <link rel="icon" href="./assets/images/icon-emp/favicon_64.ico" type="image/png" />
+
+  <!-- Meta tags-->
+  <meta name="description" content="En 2025, el SEO evoluciona hacia la IA conversacional, la búsqueda semántica y la experiencia de usuario.
+Descubre las 5 tendencias clave para dominar el posicionamiento orgánico." />
+  <meta name="keywords"
+    content="SEO 2025, tendencias SEO 2025, posicionamiento orgánico, inteligencia artificial y SEO, búsqueda semántica, SEO conversacional, estrategias de SEO, marketing digital 2025, IA y SEO, MindDev Perú" />
+  <meta name="author" content="MindDev Perú" />
+  <meta property="og:title" content="5 tendencias de SEO que debes dominar en 2025" />
+  <meta property="og:description" content="En 2025, el SEO evoluciona hacia la IA conversacional, la búsqueda semántica y la experiencia de usuario.
+Descubre las 5 tendencias clave para dominar el posicionamiento orgánico." />
+  <meta property="og:image" content="./assets/images/icon-emp/banner-opg.webp" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://minddevperu.com" />
+  <meta property="og:locale" content="es_PE" />
+
+  <!-- ESTILOS TEMPORALES -->
+  <style>
+    .article-section {
+      margin: 20px 0;
+      padding: 10px;
+    }
+
+    /* estilos momentaneos para tablas */
+    .minddev-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+    }
+
+    .minddev-table th,
+    .minddev-table td {
+      border: 1px solid #e5e7eb;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+
+    .minddev-table th {
+      background-color: #f3f4f6;
+      font-weight: 600;
+    }
+
+    .minddev-table tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    h2 {
+      color: #34495e;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  </style>
+
+</head>
+
+
+<body>
+  <header>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+      <!-- Navbar del header -->
+      <nav
+        class="bg-dark-alt rounded-full shadow-2xl p-2 flex items-center justify-between max-w-lg w-full border border-electric-blue/20 transition-all duration-300 px-6"
+        id="floating-nav">
+
+        <!-- Logo -->
+        <div class="flex items-center p-2">
+          <!-- Completar link hacia parte superior -->
+          <a href="" class="flex items-center space-x-2">
+            <img src="./assets/images/icon-emp/logo-header.png" alt="Minddev Perú"
+              class="h-8 sm:h-9 w-auto object-contain" />
+          </a>
+        </div>
+
+        <!-- Btn inicio -->
+        <div class="flex items-center space-x-3">
+          <!-- Completar link hacia inicio -->
+          <a href=""
+            class="bg-electric-blue text-white-pure px-5 py-2 rounded-full font-bold hover:bg-accent-purple transition duration-300 shadow-lg shadow-electric-blue/30 flex items-center transform hover:scale-[1.03] transition duration-300"
+            data-text-key="btn_quote">Inicio</a>
+        </div>
+
+        <!-- Btn toggleLanguage -->
+        <div class="relative" id="language-switcher-container">
+          <div class="language-switch" id="lang-switch" data-lang="es" onclick="toggleLanguageSwitch()">
+            <div class="switch-toggle"></div>
+            <span class="switch-label es-label">ES</span>
+            <span class="switch-label en-label">EN</span>
+          </div>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
     <nav id="article-navigation" class="flex gap-8">
       <a id="prev" class="cursor-pointer border-2 rounded-xl p-2 my-4 mx-auto">Articulo Anterior</a>
       <a id="next" class="cursor-pointer border-2 rounded-xl p-2 my-4 mx-auto">Articulo Siguiente</a>
@@ -53,7 +173,200 @@
     <article id="article-container">
       <!-- Aquí se insertará el contenido dinámicamente -->
     </article>
+  </main>
 
-    <script src="/js/index.js"></script>
-  </body>
+  <footer id="footer" class="relative bg-deep-blue pt-16 pb-8 border-t border-gray-700/50">
+    <!-- Btn whatsApp -->
+    <a href="https://wa.me/51903067489?text=Hola,%20quisiera%20solicitar%20una%20cotización." target="_blank"
+      class="whatsapp-float" aria-label="Contáctanos por WhatsApp">
+      <svg viewBox="0 0 24 24" width="32" height="32" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12.04 2C6.58 2 2.12 6.45 2.12 11.91C2.12 13.61 2.59 15.22 3.44 16.62L2.01 22.02L7.6 20.6C8.97 21.37 10.49 21.75 12.04 21.75C17.5 21.75 21.95 17.3 21.95 11.84C21.95 6.38 17.5 2 12.04 2ZM17.29 16.3C16.89 17.18 15.93 17.47 15.42 17.47C15.02 17.47 14.62 17.36 13.91 17.01C12.33 16.2 10.87 14.54 9.69 12.96C9.2 12.3 8.78 11.64 8.52 10.93C8.25 10.22 8.16 9.49 8.16 8.79C8.16 8.44 8.27 8.08 8.51 7.82C8.75 7.57 9.09 7.42 9.42 7.42C9.75 7.42 9.99 7.47 10.18 7.72C10.37 7.97 10.66 8.58 10.79 8.84C10.92 9.1 11.02 9.49 10.93 9.87C10.85 10.25 10.63 10.63 10.4 10.87C10.16 11.12 9.9 11.39 9.68 11.61C10.12 12.3 10.66 12.98 11.23 13.68C11.96 14.39 12.65 14.93 13.43 15.44C13.88 15.7 14.28 15.86 14.63 15.93C15.01 16.02 15.34 15.87 15.6 15.6C15.95 15.22 16.29 14.77 16.63 14.51C17.03 14.2 17.41 14.1 17.72 14.1C18.03 14.1 18.28 14.2 18.47 14.45C18.67 14.7 18.8 15.11 18.72 15.49C18.63 15.86 18.06 16.3 17.29 16.3Z">
+        </path>
+      </svg>
+    </a>
+
+    <!-- Btn volver al Inicio -->
+    <div class="text-center mb-6">
+      <a href=""
+        class="inline-flex items-center text-white-pure bg-electric-blue/20 hover:bg-electric-blue transition duration-300 rounded-full p-2 transform hover:scale-110">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-up"
+          class="lucide lucide-chevron-up w-6 h-6">
+          <path d="m18 15-6-6-6 6"></path>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Info empresa -->
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pb-8 border-b border-gray-700/50">
+        <div class="col-span-2 md:col-span-1">
+          <div class="mb-4">
+            <span class="text-3xl font-extrabold text-white-pure">MindDev</span>
+            <span class="text-3xl font-extrabold text-electric-blue">Perú</span>
+          </div>
+          <p class="text-sm text-gray-400 mb-4" data-text-key="footer_mission">
+            Transformando ideas en realidad digital con enfoque en el éxito
+            empresarial.
+          </p>
+
+          <div class="space-y-1">
+            <div class="flex items-center space-x-2 text-sm text-gray-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail"
+                class="lucide lucide-mail w-4 h-4 text-electric-blue">
+                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              </svg>
+              <a href="mailto:contacto@minddevperu.com"
+                class="hover:text-electric-blue transition">contacto@minddevperu.com</a>
+            </div>
+            <div class="flex items-center space-x-2 text-sm text-gray-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                data-lucide="phone" class="lucide lucide-phone w-4 h-4 text-electric-blue">
+                <path
+                  d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
+                </path>
+              </svg>
+              <span class="">+51 903 067 489</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Empresa y legal -->
+        <div>
+          <h5 class="text-lg font-bold text-white-pure mb-4 border-b border-electric-blue/50 pb-2"
+            data-text-key="footer_header_company">
+            Empresa &amp; Legal
+          </h5>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li data-text-key="footer_link_team">
+              <!-- Completar link hacia el equipo -->
+              <a href="" class="hover:text-electric-blue transition">Conoce al Equipo</a>
+            </li>
+            <li data-text-key="footer_link_alliances">
+              <!-- Completar link hacia alianzas -->
+              <a href="" class="hover:text-electric-blue transition">Nuestras Alianzas</a>
+            </li>
+            <li data-text-key="footer_link_privacy">
+              <!-- Completar link hacia politicas -->
+              <a href="" target="_blank" class="hover:text-electric-blue transition">Política de Privacidad</a>
+            </li>
+            <li data-text-key="footer_link_terms">
+              <!-- Completar link hacia condiciones -->
+              <a href="" target="_blank" class="hover:text-electric-blue transition">Términos y Condiciones</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Servicios clave -->
+        <div>
+          <h5 class="text-lg font-bold text-white-pure mb-4 border-b border-electric-blue/50 pb-2"
+            data-text-key="footer_header_services">
+            Servicios Clave
+          </h5>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li data-text-key="footer_link_web">
+              <!-- Completar link hacia servicios -->
+              <a href="" class="hover:text-electric-blue transition">Desarrollo Web</a>
+            </li>
+            <li data-text-key="footer_link_mobile">
+              <!-- Completar link hacia servicios -->
+              <a href="" class="hover:text-electric-blue transition">Aplicaciones Móviles</a>
+            </li>
+            <li data-text-key="footer_link_mvp">
+              <!-- Completar link hacia servicios -->
+              <a href="" class="hover:text-electric-blue transition">Desarrollo MVP</a>
+            </li>
+            <li data-text-key="footer_link_seo">
+              <!-- Completar link hacia servicios -->
+              <a href="" class="hover:text-electric-blue transition">SEO y Marketing</a>
+            </li>
+            <li data-text-key="footer_link_faq">
+              <!-- Completar link hacia faq -->
+              <a href="" class="hover:text-electric-blue transition">Preguntas Frecuentes</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Recursos -->
+        <div>
+          <h5 class="text-lg font-bold text-white-pure mb-4 border-b border-electric-blue/50 pb-2"
+            data-text-key="footer_header_resources">
+            Recursos
+          </h5>
+          <ul class="space-y-2 text-gray-400 text-sm">
+            <li data-text-key="footer_link_blog">
+              <!-- Completar link hacia Tecnologias -->
+              <a href="" class="hover:text-electric-blue transition">Blog de Tecnología</a>
+            </li>
+            <li data-text-key="footer_link_careers">
+              <!-- Completar link hacia oportunidades laborales -->
+              <a href="" class="hover:text-electric-blue transition">Oportunidades Laborales</a>
+            </li>
+            <li data-text-key="footer_link_work">
+              <a href="https://forms.gle/GYuohj7f34VsBjgZ9" target="_blank"
+                class="hover:text-electric-blue transition">Trabaja con Nosotros</a>
+            </li>
+          </ul>
+
+          <a href="https://forms.gle/zz6XzFuDG8dZHAhS9" target="_blank"
+            class="mt-6 inline-block w-full py-2 text-center text-sm font-bold rounded-lg transition duration-300 border-2 border-accent-purple bg-transparent hover:bg-accent-purple/90 hover:shadow-lg hover:shadow-accent-purple/30 text-white-pure transform hover:scale-[1.02]"
+            data-text-key="btn_claims_book">
+            LIBRO DE RECLAMACIONES
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
+        <p class="text-sm text-gray-500 order-2 sm:order-1 mb-4 sm:mb-0" data-text-key="footer_copyright">
+          © 2024 MindDev Perú. Todos los derechos reservados.
+        </p>
+
+        <div class="flex space-x-6 order-1 sm:order-2">
+          <a href="https://www.linkedin.com/company/minddev-peru" target="_blank"
+            class="text-gray-400 hover:text-electric-blue transition duration-300 transform hover:scale-110"><svg
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              data-lucide="linkedin" class="lucide lucide-linkedin w-5 h-5">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+              </path>
+              <rect width="4" height="12" x="2" y="9"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg></a>
+          <a href="https://www.facebook.com/minddev.peru" target="_blank"
+            class="text-gray-400 hover:text-electric-blue transition duration-300 transform hover:scale-110"><svg
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              data-lucide="facebook" class="lucide lucide-facebook w-5 h-5">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg></a>
+          <a href="https://www.instagram.com/minddevperu/" target="_blank"
+            class="text-gray-400 hover:text-electric-blue transition duration-300 transform hover:scale-110"><svg
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              data-lucide="instagram" class="lucide lucide-instagram w-5 h-5">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+            </svg></a>
+          <a href="https://x.com/MinddevPeru" target="_blank"
+            class="text-gray-400 hover:text-electric-blue transition duration-300 transform hover:scale-110"><svg
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              data-lucide="twitter" class="lucide lucide-twitter w-5 h-5">
+              <path
+                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+              </path>
+            </svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/index.js"></script>
+</body>
+
 </html>

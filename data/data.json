@@ -405,9 +405,9 @@
                 "content": "Para nuestros clientes, esto se traduce en **mayor control, confianza y resultados medibles**."
             },
             {
-            "id": "paragraph",
-            "tag": "p",
-            "content": "Para nuestros clientes, esto se traduce en **mayor control, confianza y resultados medibles**."
+                "id": "paragraph",
+                "tag": "p",
+                "content": "Para nuestros clientes, esto se traduce en **mayor control, confianza y resultados medibles**."
             },
             {
                 "id": "heading_two",
@@ -423,13 +423,37 @@
                 "id": "table",
                 "tag": "table",
                 "ariaLabel": "Herramientas utilizadas",
-                "headers": ["Categoría", "Herramienta", "Uso principal"],
+                "headers": [
+                    "Categoría",
+                    "Herramienta",
+                    "Uso principal"
+                ],
                 "rows": [
-                    ["Gestión de proyectos", "Notion / Trello", "Planificación de tareas y entregas"],
-                    ["Diseño UX/UI", "Figma / Miro", "Prototipado e interacción visual"],
-                    ["Desarrollo", "GitHub / Vercel", "Control de versiones y despliegue"],
-                    ["Comunicación interna", "Discord / Google Meet", "Reuniones de equipo y feedback"],
-                    ["Testing", "BrowserStack / Lighthouse", "Control de calidad y rendimiento"]
+                    [
+                        "Gestión de proyectos",
+                        "Notion / Trello",
+                        "Planificación de tareas y entregas"
+                    ],
+                    [
+                        "Diseño UX/UI",
+                        "Figma / Miro",
+                        "Prototipado e interacción visual"
+                    ],
+                    [
+                        "Desarrollo",
+                        "GitHub / Vercel",
+                        "Control de versiones y despliegue"
+                    ],
+                    [
+                        "Comunicación interna",
+                        "Discord / Google Meet",
+                        "Reuniones de equipo y feedback"
+                    ],
+                    [
+                        "Testing",
+                        "BrowserStack / Lighthouse",
+                        "Control de calidad y rendimiento"
+                    ]
                 ]
             },
             {
@@ -585,15 +609,47 @@
                 "id": "table",
                 "tag": "table",
                 "ariaLabel": "Comparativa Flutter vs Nativo",
-                "headers": ["**Aspecto**", "**Flutter**", "**Nativo**"],
+                "headers": [
+                    "**Aspecto**",
+                    "**Flutter**",
+                    "**Nativo**"
+                ],
                 "rows": [
-                    ["**Lenguaje**", "Dart", "Kotlin / Swift"],
-                    ["**Código base**", "Único para iOS y Android", "Uno por cada plataforma"],
-                    ["**Tiempo de desarrollo**", "Rápido (≈40% menos en promedio)", "Más largo"],
-                    ["**Rendimiento**", "Alto (muy cercano al nativo)", "Máximo"],
-                    ["**Mantenimiento**", "Sencillo y centralizado", "Doble esfuerzo"],
-                    ["**Experiencia de usuario (UX/UI)**", "Muy personalizable", "Integración perfecta con cada sistema"],
-                    ["**Costos**", "Más económico", "Más elevado"]
+                    [
+                        "**Lenguaje**",
+                        "Dart",
+                        "Kotlin / Swift"
+                    ],
+                    [
+                        "**Código base**",
+                        "Único para iOS y Android",
+                        "Uno por cada plataforma"
+                    ],
+                    [
+                        "**Tiempo de desarrollo**",
+                        "Rápido (≈40% menos en promedio)",
+                        "Más largo"
+                    ],
+                    [
+                        "**Rendimiento**",
+                        "Alto (muy cercano al nativo)",
+                        "Máximo"
+                    ],
+                    [
+                        "**Mantenimiento**",
+                        "Sencillo y centralizado",
+                        "Doble esfuerzo"
+                    ],
+                    [
+                        "**Experiencia de usuario (UX/UI)**",
+                        "Muy personalizable",
+                        "Integración perfecta con cada sistema"
+                    ],
+                    [
+                        "**Costos**",
+                        "Más económico",
+                        "Más elevado"
+                    ]
                 ]
             },
             {
@@ -622,7 +678,7 @@
                     "Proyectos que requieren **lanzamiento rápido** en ambas plataformas."
                 ]
             },
-                {
+            {
                 "id": "heading_three",
                 "tag": "h3",
                 "content": "**Cuándo elegir desarrollo nativo**"
@@ -698,5 +754,4 @@
             }
         ]
     }
-
 ]
