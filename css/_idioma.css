@@ -1,0 +1,70 @@
+.language-switch {
+    width: 70px;
+    height: 28px;
+    background-color: #0f172a;
+    border: 1px solid #3b82f6;
+    border-radius: 9999px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.switch-label {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+}
+
+.switch-toggle {
+    width: 50%;
+    height: 100%;
+    background-color: #3b82f6;
+    border-radius: 9999px;
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Estado EN (la palanca se mueve a la derecha) */
+.language-switch[data-lang="en"] .switch-toggle {
+    transform: translateX(100%);
+}
+
+/* Color del texto activo/inactivo */
+.language-switch[data-lang="es"] .es-label {
+    color: #0f172a;
+}
+
+/* Texto activo (ES) */
+.language-switch[data-lang="es"] .en-label {
+    color: #ffffff;
+}
+
+/* Texto inactivo (EN) */
+.language-switch[data-lang="en"] .es-label {
+    color: #ffffff;
+}
+
+/* Texto inactivo (ES) */
+.language-switch[data-lang="en"] .en-label {
+    color: #0f172a;
+}
+
+.es-label {
+    left: 0;
+    z-index: 10;
+}
+
+.en-label {
+    right: 0;
+    z-index: 10;
+}
