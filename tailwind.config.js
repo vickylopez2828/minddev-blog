@@ -1,0 +1,3 @@
+{
+  "content"; ["./**/*.{html,css,js}"]
+}
