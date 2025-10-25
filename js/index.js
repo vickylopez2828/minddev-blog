@@ -18,6 +18,7 @@ async function fetchArticleData(articleId) {
 
     setupNavigation(articleId, dataArray.length);
     displayArticle(data);
+    generateArticleIndex();
     window.scrollTo({ top: 0, behavior: "smooth" });
   } catch (error) {
     console.error("Error fetching data:", error);
