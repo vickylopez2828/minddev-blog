@@ -6,42 +6,60 @@
         "category":"Desarrollo móvil",
         "datetime":"20 oct 2025",
         "readingTime":"6 min.",
-        "link": "?id=1"
-    },
-    {
-        "id":2,
-        "title":"Introducción a la Inteligencia Artificial en el Desarrollo de Software",
-        "icon":"magnet",
-        "category":"Inteligencia Artificial",
-        "datetime":"15 nov 2025",
-        "readingTime":"8 min.",
         "link": "?id=2"
     },
     {
+        "id":2,
+        "title":"5 tendencias de SEO que debes dominar en 2025",
+        "icon":"trending-up",
+        "category":"Seo & Marketing",
+        "datetime":"15 nov 2025",
+        "readingTime":"8 min.",
+        "link": "?id=1"
+    },
+    {
         "id":3,
-        "title":"Mejores Prácticas para la Seguridad en Aplicaciones Web",
-        "icon":"send",
-        "category":"Seguridad",
+        "title":"Cómo implementamos la Metodología Ágil en MindDev",
+        "icon":"file-text",
+        "category":"Metodología",
         "datetime":"05 dic 2025",
         "readingTime":"7 min.",
         "link": "?id=3"
     },
      {
-        "id":2,
+        "id":4,
         "title":"Introducción a la Inteligencia Artificial en el Desarrollo de Software",
-        "icon":"magnet",
-        "category":"Inteligencia Artificial",
+        "icon":"mobile",
+        "category":"Seo & Marketing",
         "datetime":"15 nov 2025",
         "readingTime":"8 min.",
         "link": "?id=2"
     },
     {
-        "id":3,
+        "id":5,
         "title":"Mejores Prácticas para la Seguridad en Aplicaciones Web",
         "icon":"send",
         "category":"Seguridad",
         "datetime":"05 dic 2025",
         "readingTime":"7 min.",
         "link": "?id=3"
+    },
+    {
+        "id":3,
+        "title":"Mejores Prácticas para la Seguridad en Aplicaciones Web",
+        "icon":"file-text",
+        "category":"Seguridad",
+        "datetime":"05 dic 2025",
+        "readingTime":"7 min.",
+        "link": "?id=2"
+    },
+    {
+        "id":6,
+        "title":"Mejores Prácticas para la Seguridad en Aplicaciones Web",
+        "icon":"trending-up",
+        "category":"Seguridad",
+        "datetime":"05 dic 2025",
+        "readingTime":"7 min.",
+        "link": "?id=1"
     }
 ]
