@@ -88,7 +88,7 @@ function displayArticle(content) {
         if (item.items && Array.isArray(item.items)) {
           item.items.forEach((listItem) => {
             const li = document.createElement("li");
-            li.innerHTML = marked.parse(listItem);
+            li.innerHTML = marked.parseInline(listItem);
             // li.textContent = listItem;
             element.appendChild(li);
           });
@@ -103,7 +103,7 @@ function displayArticle(content) {
         element.setAttribute("aria-label", "Consejo de MindDev");
 
         const tipContent = document.createElement("p");
-        tipContent.innerHTML = marked.parse(item.content);
+        tipContent.innerHTML = marked.parseInline(item.content);
         // tipContent.textContent = item.content;
         element.appendChild(tipContent);
         break;
@@ -146,7 +146,7 @@ function displayArticle(content) {
       default:
         // Para h1, h2, h3, p, etc.
         element = document.createElement(item.tag);
-        element.innerHTML = marked.parse(item.content);
+        element.innerHTML = marked.parseInline(item.content);
         if (item.id) {
           element.id = item.id;
         }
