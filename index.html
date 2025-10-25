@@ -304,37 +304,53 @@ Descubre las 5 tendencias clave para dominar el posicionamiento orgánico."
         </div>
       </aside>
     </main>
-    <section id="more-articles" class="max-w-5xl p-8 relative mx-auto">
-      <img src="./assets/icons/chevron-left.svg" alt="chevron-left" class="w-12 mb-4 rotate-180 top-40 left-2 absolute" />
+    <section id="more-articles" class="p-2 sm:p-8 mx-auto w-full">
       <!-- Aquí se insertarán los artículos relacionados dinámicamente -->
-      <h2>Más artículos</h2>
-      <div id="articles-container" class="grid grid-cols-2 sm:flex sm:overflow-x-auto"></div>
-      <article class="hidden card-article bg-electric-blue/20 text-white-pure rounded-xl border border-electric-blue/80 p-6 mx-2 max-w-3xl">
-        <div class="flex rounded-2xl bg-electric-blue px-4 py-2 w-[155px]">
-          <img aria-hidden="true" class="card-icon w-4 text-white"/>
-          <span class="card-category text-xs"></span>
+      <h2 class="text-lg text-white sm:text-2xl font-bold">Más artículos</h2>
+      <div class="relative">
+        <button id="btn-prev">
+          <img src="./assets/icons/chevron-left.svg" alt="chevron-left" class="hidden cursor-pointer sm:block absolute w-12 h-12 mb-4 rotate-180 top-1/2 -translate-y-1/2 left-[-40px]" />
+        </button>
+        <button id="btn-next">
+          <img src="./assets/icons/chevron-left.svg" alt="chevron-left" class="hidden cursor-pointer sm:block w-12 h-12 mb-4 top-1/2 -translate-y-1/2 right-[-40px] absolute" />
+        </button>
+        <div id="articles-container" class="flex gap-1 sm:gap-4 overflow-x-auto scroll-smooth sm:overflow-x-hidden mt-4"></div>
+      </div>
+      <article class="hidden card-article bg-accent-purple/50 shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] text-white-pure px-3 sm:px-4 my-4 py-5 min-w-[180px] sm:flex-shrink-0 sm:max-w-[412px] rounded-[20px]">
+        <div class="flex flex-col gap-2 sm:gap-4 h-full justify-between mx-auto">
+          <div class="flex flex-col gap-2 sm:gap-4">
+            <div class="flex rounded-2xl sm:rounded-3xl gap-1 bg-accent-purple px-[5px] sm:px-[13px] py-2 w-[116px] sm:w-[135px] items-center justify-center">
+              <img aria-hidden="true" class="card-icon w-4 h-4 text-white"/>
+              <p class="card-category text-[10px] font-medium"></p>
+            </div>
+            <h3 class="card-title text-sm sm:text-xl font-bold"></h3> 
+          </div>
+          <div class="flex flex-col gap-2 sm:gap-4">
+            <div class="post-meta mt-1">
+              <time class="card-datetime text-[10px] sm:text-sm font-normal"></time>
+              <span class="card-reading-time text-[10px] sm:text-sm font-normal"></span>
+            </div>
+            <div class="flex items-center gap-1 mt-4">
+              <a class="card-link text-electric-blue font-semibold text-[12px] sm:text-sm" href="#" >Leer Artículo </a>
+              <img src="/assets/icons/arrowRight.svg" class="w-4 hidden sm:block"/>
+              <img src="/assets/icons/chevron-right.svg" class="w-[5px] sm:hidden"/>
+            </div>
+          </div>
         </div>
-        <h3 class="card-title"></h3>
-        <div class="post-meta">
-          <time class="card-datetime"></time>
-          <span class="card-reading-time"></span>
-        </div>
-        <div class="flex">
-          <a class="card-link text-electric-blue" href="#" >Leer Artículo </a>
-          <img src="/assets/icons/chevron-right.svg"/>
-        </div>
-        <img src="./assets/icons/chevron-left.svg" alt="chevron-left" class="w-12 mb-4 top-40 right-2 absolute" />
       </article>
     </section>
-    <section id="newsletter" class="border-electric-blue border-2 p-10">
-      <h2>Suscríbete a nuestro Newsletter</h2>
-      <p>Recibe las últimas novedades de MindDev y mantente informado acerca de las últimas tendencias en tecnología, innovaciones de software y consejos de desarrollo.</p>
-      <form>
-        <div>
-          <input type="email" placeholder="Tu direccion de email">
-          <button type="submit">Suscribirse</button>
-        </div>
-        <span>Al suscribirse, acepetas nuestras <a href="# ">Políticas de Privacidad</a> y <a>Términos y Condiciones</a></span>
+    <section id="newsletter" class="mx-2 sm:mx-8 min-w-[370px] border-accent-purple border-4 rounded-[20px] px-8 py-5 flex flex-col gap-8 sm:gap-12">
+      <h2 class="font-bold text-2xl sm:text-[26px] text-white">Suscríbete a nuestro Newsletter</h2>
+      <p class="text-xs sm:text-[22px] font-normal leading-6 sm:leading-8">Recibe las últimas novedades de MindDev y mantente informado acerca de las últimas tendencias en tecnología, innovaciones de software y consejos de desarrollo.</p>
+      <form class="flex flex-col gap-4 w-full sm:max-w-[600px] mx-auto mb-10 sm:mb-16" id="form-newsletter">
+          <div class="flex flex-col sm:flex-row gap-4 w-full">
+            <div class="flex items-center gap-4 relative w-full">
+              <img src="./assets/icons/envelope.svg" alt="icono email" class="w-6 mr-3 mb-4 absolute top-1/2 -translate-y-1/2 left-5"/>
+              <input id="input-email" type="email" class="px-5 py-[10px] shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] rounded-[40px] bg-accent-purple/10 w-full placeholder:text-[14px] sm:placeholder:text-lg placeholder:text-white placeholder:pl-8" placeholder="Tu dirección de email">
+            </div>
+            <button type="submit" class="p-[10px] shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] rounded-[40px] bg-electric-blue w-full font-bold text-base sm:text-xl hover:bg-accent-purple transition duration-200 sm:max-w-40">Suscribirse</button>
+          </div>
+          <span class="text-[11px] sm:text-base mt-2">Al suscribir, aceptas nuestras <a href="#" class="text-electric-blue underline text-[11px] sm:text-base text-center cursor-pointer">Políticas de Privacidad</a> y <a class="text-electric-blue underline text-[11px] sm:text-base text-center cursor-pointer">Términos y Condiciones</a></span>
       </form>
     </section>
     <footer
@@ -687,5 +703,6 @@ Descubre las 5 tendencias clave para dominar el posicionamiento orgánico."
 
     <script src="./js/index.js"></script>
     <script src="./js/card.js"></script>
+    <script src="./js/slide.js"></script>
   </body>
 </html>
