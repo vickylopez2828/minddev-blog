@@ -138,6 +138,35 @@ Descubre las 5 tendencias clave para dominar el posicionamiento orgánico."
       p {
         line-height: 1.6;
       }
+
+      /* Estilos para el índice */
+      #index-list {
+        scrollbar-width: thin;
+        scrollbar-color: #3b82f6 #1e293b;
+      }
+
+      #index-list::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      #index-list::-webkit-scrollbar-track {
+        background: #1e293b;
+        border-radius: 10px;
+      }
+
+      #index-list::-webkit-scrollbar-thumb {
+        background: #3b82f6;
+        border-radius: 10px;
+      }
+
+      .mobile-index-container {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+
+      .mobile-index-container::-webkit-scrollbar {
+        display: none;
+      }
     </style>
   </head>
 
@@ -243,6 +272,17 @@ Descubre las 5 tendencias clave para dominar el posicionamiento orgánico."
       </section>
     </section>
 
+    <div
+      id="mobile-index-container"
+      class="lg:hidden bg-dark-alt py-3 px-4 border-b border-electric-blue/20 scrollbar-hide"
+    >
+      <div
+        class="mobile-index-container flex space-x-4 overflow-x-auto pb-2 scrollbar-hide"
+        id="mobile-index-list"
+      >
+        <!-- Los ítems del índice se generarán aquí dinámicamente -->
+      </div>
+    </div>
     <main class="flex justify-between gap-7">
       <article class="lg:pl-20 lg:pt-14 max-w-5xl" id="article-container">
         <!-- Aquí se insertará el contenido dinámicamente -->
@@ -302,6 +342,20 @@ Descubre las 5 tendencias clave para dominar el posicionamiento orgánico."
             />
           </button>
         </div>
+        <!-- Índice del artículo (solo desktop) -->
+        <div
+          id="article-index"
+          class="bg-[#151E3C] rounded-xl p-6 mt-10 lg:w-72 lg:mr-20 hidden md:block"
+        >
+          <h3
+            class="text-lg font-bold text-white-pure mb-4 border-b border-electric-blue/50 pb-2"
+          >
+            Índice del Artículo
+          </h3>
+          <nav id="index-list" class="space-y-2 max-h-80 overflow-y-auto pr-2">
+            <!-- Índice generado dinámicamente -->
+          </nav>
+        </div>
       </aside>
     </main>
     <section id="more-articles" class="p-2 sm:p-8 mx-auto w-full mt-8">
@@ -309,48 +363,117 @@ Descubre las 5 tendencias clave para dominar el posicionamiento orgánico."
       <h2 class="text-lg text-white sm:text-2xl font-bold">Más artículos</h2>
       <div class="relative">
         <button id="btn-prev">
-          <img src="./assets/icons/chevron-left.svg" alt="chevron-left" class="hidden cursor-pointer sm:block absolute w-12 h-12 mb-4 rotate-180 top-1/2 -translate-y-1/2 left-[-40px]" />
+          <img
+            src="./assets/icons/chevron-left.svg"
+            alt="chevron-left"
+            class="hidden cursor-pointer sm:block absolute w-12 h-12 mb-4 rotate-180 top-1/2 -translate-y-1/2 left-[-40px]"
+          />
         </button>
         <button id="btn-next">
-          <img src="./assets/icons/chevron-left.svg" alt="chevron-left" class="hidden cursor-pointer sm:block w-12 h-12 mb-4 top-1/2 -translate-y-1/2 right-[-40px] absolute" />
+          <img
+            src="./assets/icons/chevron-left.svg"
+            alt="chevron-left"
+            class="hidden cursor-pointer sm:block w-12 h-12 mb-4 top-1/2 -translate-y-1/2 right-[-40px] absolute"
+          />
         </button>
-        <div id="articles-container" class="flex gap-1 sm:gap-4 overflow-x-auto scroll-smooth sm:overflow-x-hidden"></div>
+        <div
+          id="articles-container"
+          class="flex gap-1 sm:gap-4 overflow-x-auto scroll-smooth sm:overflow-x-hidden"
+        ></div>
       </div>
-      <article class="hidden card-article bg-accent-purple/50 shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] text-white-pure px-3 sm:px-4 my-4 py-5 min-w-[180px] sm:flex-shrink-0 sm:max-w-[412px] rounded-[20px]">
-        <div class="flex flex-col gap-2 sm:gap-4 h-full justify-between mx-auto">
+      <article
+        class="hidden card-article bg-accent-purple/50 shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] text-white-pure px-3 sm:px-4 my-4 py-5 min-w-[180px] sm:flex-shrink-0 sm:max-w-[412px] rounded-[20px]"
+      >
+        <div
+          class="flex flex-col gap-2 sm:gap-4 h-full justify-between mx-auto"
+        >
           <div class="flex flex-col gap-2 sm:gap-4">
-            <div class="flex rounded-2xl sm:rounded-3xl gap-1 bg-accent-purple px-[5px] sm:px-[13px] py-2 w-[116px] sm:w-[135px] items-center justify-center">
-              <img aria-hidden="true" class="card-icon w-4 h-4 text-white"/>
+            <div
+              class="flex rounded-2xl sm:rounded-3xl gap-1 bg-accent-purple px-[5px] sm:px-[13px] py-2 w-[116px] sm:w-[135px] items-center justify-center"
+            >
+              <img aria-hidden="true" class="card-icon w-4 h-4 text-white" />
               <p class="card-category text-[10px] font-medium"></p>
             </div>
-            <h3 class="card-title text-sm sm:text-xl font-bold"></h3> 
+            <h3 class="card-title text-sm sm:text-xl font-bold"></h3>
           </div>
           <div class="flex flex-col gap-2 sm:gap-4">
             <div class="post-meta mt-1">
-              <time class="card-datetime text-[10px] sm:text-sm font-normal"></time>
-              <span class="card-reading-time text-[10px] sm:text-sm font-normal"></span>
+              <time
+                class="card-datetime text-[10px] sm:text-sm font-normal"
+              ></time>
+              <span
+                class="card-reading-time text-[10px] sm:text-sm font-normal"
+              ></span>
             </div>
             <div class="flex items-center gap-1 mt-4">
-              <a class="card-link text-electric-blue font-semibold text-[12px] sm:text-sm" href="#" >Leer Artículo </a>
-              <img src="/assets/icons/arrowRight.svg" class="w-4 hidden sm:block"/>
-              <img src="/assets/icons/chevron-right.svg" class="w-[5px] sm:hidden"/>
+              <a
+                class="card-link text-electric-blue font-semibold text-[12px] sm:text-sm"
+                href="#"
+                >Leer Artículo
+              </a>
+              <img
+                src="/assets/icons/arrowRight.svg"
+                class="w-4 hidden sm:block"
+              />
+              <img
+                src="/assets/icons/chevron-right.svg"
+                class="w-[5px] sm:hidden"
+              />
             </div>
           </div>
         </div>
       </article>
     </section>
-    <section id="newsletter" class="mx-2 sm:mx-8 min-w-[370px] border-accent-purple border-4 rounded-[20px] px-8 py-5 flex flex-col gap-8 sm:gap-12 my-8 sm:my-12">
-      <h2 class="font-bold text-2xl sm:text-[26px] text-white">Suscríbete a nuestro Newsletter</h2>
-      <p class="text-xs sm:text-[22px] font-normal leading-6 sm:leading-8">Recibe las últimas novedades de MindDev y mantente informado acerca de las últimas tendencias en tecnología, innovaciones de software y consejos de desarrollo.</p>
-      <form class="flex flex-col gap-4 w-full sm:max-w-[600px] mx-auto mb-10 sm:mb-16" id="form-newsletter">
-          <div class="flex flex-col sm:flex-row gap-4 w-full">
-            <div class="flex items-center gap-4 relative w-full">
-              <img src="./assets/icons/envelope.svg" alt="icono email" class="w-6 mr-3 mb-4 absolute top-1/2 -translate-y-1/2 left-5"/>
-              <input id="input-email" type="email" class="px-5 py-[10px] shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] rounded-[40px] bg-accent-purple/10 w-full placeholder:text-[14px] sm:placeholder:text-lg placeholder:text-white placeholder:pl-8" placeholder="Tu dirección de email">
-            </div>
-            <button type="submit" class="p-[10px] shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] rounded-[40px] bg-electric-blue w-full font-bold text-base sm:text-xl hover:bg-accent-purple transition duration-200 sm:max-w-40">Suscribirse</button>
+    <section
+      id="newsletter"
+      class="mx-2 sm:mx-8 min-w-[370px] border-accent-purple border-4 rounded-[20px] px-8 py-5 flex flex-col gap-8 sm:gap-12 my-8 sm:my-12"
+    >
+      <h2 class="font-bold text-2xl sm:text-[26px] text-white">
+        Suscríbete a nuestro Newsletter
+      </h2>
+      <p class="text-xs sm:text-[22px] font-normal leading-6 sm:leading-8">
+        Recibe las últimas novedades de MindDev y mantente informado acerca de
+        las últimas tendencias en tecnología, innovaciones de software y
+        consejos de desarrollo.
+      </p>
+      <form
+        class="flex flex-col gap-4 w-full sm:max-w-[600px] mx-auto mb-10 sm:mb-16"
+        id="form-newsletter"
+      >
+        <div class="flex flex-col sm:flex-row gap-4 w-full">
+          <div class="flex items-center gap-4 relative w-full">
+            <img
+              src="./assets/icons/envelope.svg"
+              alt="icono email"
+              class="w-6 mr-3 mb-4 absolute top-1/2 -translate-y-1/2 left-5"
+            />
+            <input
+              id="input-email"
+              type="email"
+              class="px-5 py-[10px] shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] rounded-[40px] bg-accent-purple/10 w-full placeholder:text-[14px] sm:placeholder:text-lg placeholder:text-white placeholder:pl-8"
+              placeholder="Tu dirección de email"
+            />
           </div>
-          <span class="text-[11px] sm:text-base mt-2">Al suscribir, aceptas nuestras <a href="#" class="text-electric-blue underline text-[11px] sm:text-base text-center cursor-pointer">Políticas de Privacidad</a> y <a class="text-electric-blue underline text-[11px] sm:text-base text-center cursor-pointer">Términos y Condiciones</a></span>
+          <button
+            type="submit"
+            class="p-[10px] shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] rounded-[40px] bg-electric-blue w-full font-bold text-base sm:text-xl hover:bg-accent-purple transition duration-200 sm:max-w-40"
+          >
+            Suscribirse
+          </button>
+        </div>
+        <span class="text-[11px] sm:text-base mt-2"
+          >Al suscribir, aceptas nuestras
+          <a
+            href="#"
+            class="text-electric-blue underline text-[11px] sm:text-base text-center cursor-pointer"
+            >Políticas de Privacidad</a
+          >
+          y
+          <a
+            class="text-electric-blue underline text-[11px] sm:text-base text-center cursor-pointer"
+            >Términos y Condiciones</a
+          ></span
+        >
       </form>
     </section>
     <footer
@@ -629,8 +752,9 @@ Descubre las 5 tendencias clave para dominar el posicionamiento orgánico."
                   d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
                 ></path>
                 <rect width="4" height="12" x="2" y="9"></rect>
-                <circle cx="4" cy="4" r="2"></circle></svg>
-          </a>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
             <a
               href="https://www.facebook.com/minddev.peru"
               target="_blank"
@@ -650,7 +774,8 @@ Descubre las 5 tendencias clave para dominar el posicionamiento orgánico."
               >
                 <path
                   d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-                ></path></svg>
+                ></path>
+              </svg>
             </a>
             <a
               href="https://www.instagram.com/minddevperu/"
@@ -673,7 +798,8 @@ Descubre las 5 tendencias clave para dominar el posicionamiento orgánico."
                 <path
                   d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
                 ></path>
-                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
             </a>
             <a
               href="https://x.com/MinddevPeru"
@@ -694,7 +820,8 @@ Descubre las 5 tendencias clave para dominar el posicionamiento orgánico."
               >
                 <path
                   d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
-                ></path></svg>
+                ></path>
+              </svg>
             </a>
           </div>
         </div>
@@ -704,5 +831,6 @@ Descubre las 5 tendencias clave para dominar el posicionamiento orgánico."
     <script src="./js/index.js"></script>
     <script src="./js/card.js"></script>
     <script src="./js/slide.js"></script>
+    <script src="./js/article-index.js"></script>
   </body>
 </html>
