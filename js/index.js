@@ -1,3 +1,4 @@
+// js/index.js
 async function fetchArticleData(articleId) {
   try {
     const response = await fetch("../data/data.json");
@@ -14,7 +15,8 @@ async function fetchArticleData(articleId) {
     }
     window.history.pushState({ articleId }, "", `?id=${articleId}`);
 
-    document.title = data.title || "Blog - MindDev";
+    // ACTUALIZAR METATAGS DINÁMICOS - NUEVA LÍNEA
+    updateMetaTags(data);
 
     setupNavigation(articleId, dataArray.length);
     displayArticle(data);
@@ -26,6 +28,7 @@ async function fetchArticleData(articleId) {
     container.innerHTML = "<p>Error al cargar el contenido.</p>";
   }
 }
+
 function setupNavigation(currentId, totalArticles) {
   const prevButton = document.getElementById("prev");
   const nextButton = document.getElementById("next");
@@ -69,6 +72,7 @@ function setupNavigation(currentId, totalArticles) {
     }
   }
 }
+
 function displayArticle(content) {
   const container = document.getElementById("article-container");
   container.innerHTML = "";
