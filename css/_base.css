@@ -4,3 +4,15 @@
 @import url("./_indice.css");
 @import url("./_hero-banner.css");
 @import url("./_article-styles.css");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
