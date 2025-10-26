@@ -152,8 +152,8 @@ function displayArticle(content) {
           const thead = document.createElement("thead");
           const headerRow = document.createElement("tr");
           item.headers.forEach((header) => {
-            const th = document.createElement("th");
-            th.textContent = header;
+            const th = document.createElement("th");  
+            th.innerHTML = marked.parseInline(header);
             headerRow.appendChild(th);
           });
           thead.appendChild(headerRow);
