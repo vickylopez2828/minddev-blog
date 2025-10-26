@@ -112,16 +112,33 @@ function displayArticle(content) {
         break;
 
       case "aside":
-        // Crear elemento aside para tips
+        // Crear elemento aside para tips CON ICONO
         element = document.createElement("aside");
         element.className = "tip-minddev";
         element.setAttribute("role", "note");
         element.setAttribute("aria-label", "Consejo de MindDev");
 
-        const tipContent = document.createElement("p");
-        tipContent.innerHTML = marked.parseInline(item.content);
+        // Crear contenedor para el contenido del tip
+        const tipContent = document.createElement("div");
+        tipContent.className = "tip-content";
+        
+        // Agregar icono si existe
+        if (item.icon && item.icon.content) {
+          const iconElement = document.createElement(item.icon.tag || "img");
+          iconElement.className = "tip-icon";
+          iconElement.src = item.icon.content;
+          iconElement.alt = "Icono MindDev";
+          element.appendChild(iconElement);
+        }
+
+        // Agregar texto del tip
+        const tipText = document.createElement("p");
+        tipText.innerHTML = marked.parseInline(item.content);
+        tipContent.appendChild(tipText);
+        
         element.appendChild(tipContent);
         break;
+
       case "table":
         // Crear tabla con cabecera y cuerpo
         element = document.createElement("table");

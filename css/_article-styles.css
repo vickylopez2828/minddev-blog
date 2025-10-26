@@ -1,0 +1,349 @@
+/* css/article-styles.css */
+/* Estilos para el contenido del artículo generado dinámicamente */
+
+/* Contenedor principal del artículo */
+#article-container {
+    color: #e2e8f0;
+    line-height: 1.7;
+}
+
+/* Títulos */
+#article-container h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+#article-container h2 {
+    color: #ffffff;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #ffffff;
+}
+
+#article-container h3 {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 1.5rem 0 1rem 0;
+    font-style: italic;
+}
+
+/* Párrafos */
+#article-container p {
+    margin-bottom: 1.25rem;
+    font-size: 1.125rem;
+    color: #cbd5e1;
+}
+
+/* Listas */
+#article-container ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+#article-container li {
+    margin-bottom: 0.5rem;
+    color: #cbd5e1;
+    font-size: 1.125rem;
+}
+
+#article-container li::marker {
+    color: #ffffff;
+}
+
+/* Tablas */
+.minddev-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    
+}
+
+.minddev-table th,
+.minddev-table td {
+    border: 3px solid #5355dd;
+    padding: 1rem;
+    text-align: left;
+}
+
+.minddev-table th {
+    
+    background-color: #5355dd;
+    color: white;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.minddev-table td {
+    background-color: transparent;
+    color: #cbd5e1;
+}
+
+.minddev-table tr:nth-child(even) td {
+    background-color: #0f172a;
+}
+
+/* Tips MindDev CON ICONOS - Estilo principal */
+.tip-minddev {
+    position: relative;
+    background: #151E3C;
+    border: 4px solid #5355dd;
+    border-radius: 21px;
+    padding: 3rem 1.5rem 1.5rem;
+    margin: 3rem 0 1.5rem;
+    color: white;
+    box-shadow: 0 8px 25px -8px rgba(83, 85, 221, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Icono del tip - posicionado a mitad del borde superior */
+.tip-icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: #5355dd;
+    border-radius: 50%;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Asegurar que el icono SVG se vea bien */
+.tip-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+/* Contenido del tip */
+.tip-content {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.tip-minddev p {
+    margin: 0;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Versión alternativa con grid */
+.tip-minddev.grid-style {
+    display: grid;
+    grid-template-areas: 
+        "icon"
+        "content";
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+    align-items: start;
+    text-align: left;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.tip-minddev.grid-style .tip-icon {
+    position: static;
+    transform: none;
+    grid-area: icon;
+    justify-self: center;
+    margin-top: -3rem;
+    width: 50px;
+    height: 50px;
+}
+
+.tip-minddev.grid-style .tip-content {
+    grid-area: content;
+    margin-top: 0;
+}
+
+/* Versión con flex para icono a la izquierda */
+.tip-minddev.flex-style {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    text-align: left;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.tip-minddev.flex-style .tip-icon {
+    position: static;
+    transform: none;
+    flex-shrink: 0;
+    margin-top: 0;
+    width: 40px;
+    height: 40px;
+    border-width: 3px;
+}
+
+.tip-minddev.flex-style .tip-content {
+    margin-top: 0;
+    flex: 1;
+}
+
+/* Blockquotes (call to action) */
+#article-container blockquote {
+    background: #1e293b;
+    border-left: 4px solid #5355dd;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    font-style: italic;
+    color: #cbd5e1;
+}
+
+/* Enlaces dentro del artículo */
+#article-container a {
+    color: #60a5fa;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+#article-container a:hover {
+    color: #3b82f6;
+    text-decoration: underline;
+}
+
+/* Texto en negrita */
+#article-container strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Estilos para elementos específicos de markdown */
+#article-container em {
+    color: #cbd5e1;
+    font-style: italic;
+}
+
+#article-container code {
+    background: #334155;
+    color: #f1f5f9;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+#article-container pre {
+    background: #1e293b;
+    color: #f1f5f9;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+#article-container pre code {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* Estilo para colorear automáticamente el texto antes de los dos puntos */
+.tip-content p::before {
+    content: "Tip MindDev: ";
+    color: #3b82f6;
+    font-weight: 700;
+}
+
+.tip-content p {
+    color: #cbd5e1;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    #article-container h1 {
+        font-size: 2rem;
+    }
+    
+    #article-container h2 {
+        font-size: 1.5rem;
+    }
+    
+    #article-container h3 {
+        font-size: 1.25rem;
+    }
+    
+    #article-container p,
+    #article-container li {
+        font-size: 1rem;
+    }
+    
+    .minddev-table {
+        font-size: 0.875rem;
+    }
+    
+    .minddev-table th,
+    .minddev-table td {
+        padding: 0.75rem;
+    }
+    
+    /* Tips responsive */
+    .tip-minddev {
+        padding: 2.5rem 1.25rem 1.25rem;
+        margin: 2.5rem 0 1.25rem;
+    }
+    
+    .tip-icon {
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        border-width: 3px;
+    }
+    
+    .tip-minddev p {
+        font-size: 1rem;
+    }
+    
+    .tip-minddev.flex-style {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.75rem;
+    }
+    
+    .tip-minddev.flex-style .tip-icon {
+        margin-top: 0;
+    }
+    
+    .tip-minddev.grid-style .tip-icon {
+        width: 45px;
+        height: 45px;
+        margin-top: -2.5rem;
+    }
+}
+
+/* Animaciones suaves */
+.tip-minddev {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tip-minddev:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px -10px rgba(83, 85, 221, 0.4);
+}
