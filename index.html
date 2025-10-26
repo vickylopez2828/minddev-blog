@@ -66,7 +66,7 @@
 
     <link rel="icon" href="./assets/images/favicon_64.ico" type="image/png" />
 
-    <!-- ESTILOS TEMPORALES -->
+    <!-- ESTILOS -->
     <style>
       :root {
         --deep-blue: #0f172a;
@@ -81,7 +81,7 @@
         padding: 10px;
       }
 
-      /* estilos momentaneos para tablas */
+      /* estilos para tablas */
       .minddev-table {
         width: 100%;
         border-collapse: separate;
@@ -153,6 +153,7 @@
   </head>
 
   <body class="bg-deep-blue text-white-pure font-[Inter]">
+    <!-- Header -->
     <header
       class="sticky top-0 z-40 transition-all duration-300 bg-deep-blue/95 backdrop-blur-sm shadow-lg pb-2"
       id="main-header"
@@ -202,7 +203,7 @@
         </nav>
       </div>
     </header>
-
+    <!-- Hero -->
     <section
       class="hero-banner w-full h-60 lg:h-96 bg-cover flex flex-col"
       style="background-image: url(/assets/images/hero-banner.png)"
@@ -236,10 +237,10 @@
         <!-- Los elementos del header se generarán dinámicamente aquí -->
       </section>
     </section>
-
+    <!-- Índice mobile -->
     <div
       id="mobile-index-container"
-      class="lg:hidden bg-dark-alt py-3 px-4 border-b border-electric-blue/20 scrollbar-hide"
+      class="lg:hidden bg-dark-alt py-3 px-4 border-b border-electric-blue/20 scrollbar-hide mb-4"
     >
       <div
         class="mobile-index-container flex space-x-4 overflow-x-auto scrollbar-hide"
@@ -249,12 +250,14 @@
       </div>
     </div>
     <main class="flex justify-between gap-7 pl-4">
+      <!-- Contenido principal del blog -->
       <article
         class="w-[296px] sm:w-[496px] md:w-[856px] lg:w-[1050px] lg:pl-20 lg:pt-14"
         id="article-container"
       >
         <!-- Aquí se insertará el contenido dinámicamente -->
       </article>
+      <!-- Redes -->
       <aside
         class="pr-3 rounded-xl md:pl-3 lg:w-72 lg:flex lg:flex-col lg:pt-3 lg:mt-14 lg:mr-20 lg:gap-6"
       >
@@ -333,158 +336,164 @@
         </div>
       </aside>
     </main>
-    <section id="more-articles" class="p-4 sm:p-8 mx-auto w-full mt-4 sm:mt-8">
-      <!-- Aquí se insertarán los artículos relacionados dinámicamente -->
-      <h2 class="text-lg text-white sm:text-2xl font-bold">Más artículos</h2>
-      <div class="relative">
-        <button id="btn-prev">
-          <img
-            src="./assets/icons/chevron-left.svg"
-            alt="chevron-left"
-            class="hidden cursor-pointer sm:block absolute w-12 h-12 mb-4 rotate-180 top-1/2 -translate-y-1/2 left-[-40px]"
-          />
-        </button>
-        <button id="btn-next">
-          <img
-            src="./assets/icons/chevron-left.svg"
-            alt="chevron-left"
-            class="hidden cursor-pointer sm:block w-12 h-12 mb-4 top-1/2 -translate-y-1/2 right-[-40px] absolute"
-          />
-        </button>
-        <div
-          id="articles-container"
-          class="flex gap-1 sm:gap-4 overflow-x-auto scroll-smooth sm:overflow-x-hidden"
-        ></div>
-      </div>
-      <article
-        class="hidden card-article bg-accent-purple/50 shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] text-white-pure px-3 sm:px-4 my-4 py-5 min-w-[180px] sm:flex-shrink-0 sm:max-w-[412px] rounded-[20px]"
-      >
-        <div
-          class="flex flex-col gap-2 sm:gap-4 h-full justify-between mx-auto"
-        >
-          <div class="flex flex-col gap-2 sm:gap-4">
-            <div
-              class="flex rounded-2xl sm:rounded-3xl gap-1 bg-accent-purple px-[5px] sm:px-[13px] py-2 w-[116px] sm:w-[135px] items-center justify-center"
-            >
-              <img aria-hidden="true" class="card-icon w-4 h-4 text-white" />
-              <p class="card-category text-[10px] font-medium"></p>
-            </div>
-            <h3 class="card-title text-sm sm:text-xl font-bold"></h3>
-          </div>
-          <div class="flex flex-col gap-2 sm:gap-4">
-            <div class="post-meta mt-1">
-              <time
-                class="card-datetime text-[10px] sm:text-sm font-normal"
-              ></time>
-              <span
-                class="card-reading-time text-[10px] sm:text-sm font-normal"
-              ></span>
-            </div>
-            <div class="flex items-center gap-1 mt-4">
-              <a
-                class="card-link text-electric-blue font-semibold text-[12px] sm:text-sm"
-                href="#"
-                >Leer Artículo
-              </a>
-              <img
-                src="/assets/icons/arrowRight.svg"
-                class="w-4 hidden sm:block"
-              />
-              <img
-                src="/assets/icons/chevron-right.svg"
-                class="w-[5px] sm:hidden"
-              />
-            </div>
-          </div>
-        </div>
-      </article>
-    </section>
-    <section
-      id="comments-section"
-      class="p-4 sm:p-8 mx-auto w-full mt-4 sm:mt-8"
-    >
-      <h2 class="text-lg text-white sm:text-2xl font-bold mb-4">
-        Comentarios de los usuarios
-      </h2>
-      <article id="comment-container" class="my-8">
-        <form id="comment-form" class="flex flex-col gap-4">
-          <textarea
-            name="comment"
-            id="comment"
-            rows="4"
-            placeholder="Escribe tu comentario..."
-            class="px-4 py-2 rounded-[10px] bg-accent-purple/10 border-[1px] border-accent-purple placeholder:text-gray-600 text-white"
-          ></textarea>
-          <p id="comment-error" class="hidden text-red-700 text-xs">
-            Debes escribir un comentario
-          </p>
-          <button
-            id="btn-comment"
-            type="submit"
-            class="p-[10px] shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] rounded-[40px] bg-electric-blue text-sm sm:text-lg hover:bg-accent-purple transition duration-200 w-40"
-          >
-            Comentar
-          </button>
-        </form>
-      </article>
-      <!-- Los comentarios se renderizarán aquí dinámicamente -->
-      <article
-        id="comments-container"
-        class="flex flex-col gap-8 items-start mt-4 rounded-[10px] bg-[#313684] border-2 px-4 py-10 min-h-24 sm:p-8 border-accent-purple"
-      ></article>
-    </section>
-    <section
-      id="newsletter"
-      class="mx-4 sm:mx-8 min-w-[370px] border-accent-purple border-4 rounded-[20px] px-6 sm:px-8 py-5 sm:py-8 flex flex-col gap-8 sm:gap-12 my-8 sm:my-12"
-    >
-      <h2 class="font-bold text-2xl sm:text-[26px] text-white">
-        Suscríbete a nuestro Newsletter
-      </h2>
-      <p class="text-xs sm:text-[22px] font-normal leading-6 sm:leading-8">
-        Recibe las últimas novedades de MindDev y mantente informado acerca de
-        las últimas tendencias en tecnología, innovaciones de software y
-        consejos de desarrollo.
-      </p>
-      <form
-        class="flex flex-col gap-4 w-full sm:max-w-[600px] mx-auto mb-10 sm:mb-16"
-        id="form-newsletter"
-      >
-        <div class="flex flex-col sm:flex-row gap-4 w-full">
-          <div class="flex items-center gap-4 relative w-full">
-            <input
-              id="input-email"
-              type="email"
-              class="px-5 py-[10px] shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] rounded-[40px] bg-accent-purple/10 w-full placeholder:text-[14px] sm:placeholder:text-lg placeholder:text-white placeholder:pl-8 peer"
-              placeholder="Tu dirección de email"
-            />
+    <section class="lg:pl-20">
+      <!-- Sección Más Artículos -->
+      <section id="more-articles" class="p-4 sm:p-8 mx-auto w-full mt-4 sm:mt-8">
+        <!-- Aquí se insertarán los artículos relacionados dinámicamente -->
+        <h2 class="text-lg text-white sm:text-2xl font-bold">Más artículos</h2>
+        <div class="relative">
+          <button id="btn-prev">
             <img
-              src="./assets/icons/envelope.svg"
-              alt="icono email"
-              class="w-6 mr-3 mb-4 absolute top-1/2 -translate-y-1/2 left-5 pointer-events-none transition-opacity peer-[:not(:placeholder-shown)]:opacity-0"
+              src="./assets/icons/chevron-left.svg"
+              alt="chevron-left"
+              class="hidden cursor-pointer sm:block absolute w-12 h-12 mb-4 rotate-180 top-1/2 -translate-y-1/2 left-[-40px]"
             />
-          </div>
-          <button
-            type="submit"
-            class="p-[10px] shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] rounded-[40px] bg-electric-blue w-full font-bold text-base sm:text-xl hover:bg-accent-purple transition duration-200 sm:max-w-40"
-          >
-            Suscribirse
           </button>
+          <button id="btn-next">
+            <img
+              src="./assets/icons/chevron-left.svg"
+              alt="chevron-left"
+              class="hidden cursor-pointer sm:block w-12 h-12 mb-4 top-1/2 -translate-y-1/2 right-[-40px] absolute"
+            />
+          </button>
+          <div
+            id="articles-container"
+            class="flex gap-1 sm:gap-4 overflow-x-auto scroll-smooth sm:overflow-x-hidden"
+          ></div>
         </div>
-        <span class="text-[11px] sm:text-base mt-2"
-          >Al suscribir, aceptas nuestras
-          <a
-            href="#"
-            class="text-electric-blue underline text-[11px] sm:text-base text-center cursor-pointer"
-            >Políticas de Privacidad</a
-          >
-          y
-          <a
-            class="text-electric-blue underline text-[11px] sm:text-base text-center cursor-pointer"
-            >Términos y Condiciones</a
-          ></span
+        <article
+          class="hidden card-article bg-accent-purple/50 shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] text-white-pure px-3 sm:px-4 my-4 py-5 min-w-[180px] sm:flex-shrink-0 sm:max-w-[412px] rounded-[20px]"
         >
-      </form>
+          <div
+            class="flex flex-col gap-2 sm:gap-4 h-full justify-between mx-auto"
+          >
+            <div class="flex flex-col gap-2 sm:gap-4">
+              <div
+                class="flex rounded-2xl sm:rounded-3xl gap-1 bg-accent-purple px-[5px] sm:px-[13px] py-2 w-[116px] sm:w-[135px] items-center justify-center"
+              >
+                <img aria-hidden="true" class="card-icon w-4 h-4 text-white" />
+                <p class="card-category text-[10px] font-medium"></p>
+              </div>
+              <h3 class="card-title text-sm sm:text-xl font-bold"></h3>
+            </div>
+            <div class="flex flex-col gap-2 sm:gap-4">
+              <div class="post-meta mt-1">
+                <time
+                  class="card-datetime text-[10px] sm:text-sm font-normal"
+                ></time>
+                <span
+                  class="card-reading-time text-[10px] sm:text-sm font-normal"
+                ></span>
+              </div>
+              <div class="flex items-center gap-1 mt-4">
+                <a
+                  class="card-link text-electric-blue font-semibold text-[12px] sm:text-sm"
+                  href="#"
+                  >Leer Artículo
+                </a>
+                <img
+                  src="/assets/icons/arrowRight.svg"
+                  class="w-4 hidden sm:block"
+                />
+                <img
+                  src="/assets/icons/chevron-right.svg"
+                  class="w-[5px] sm:hidden"
+                />
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <!-- Sección comentarios -->
+      <section
+        id="comments-section"
+        class="p-4 sm:p-8 mx-auto w-full mt-4 sm:mt-8"
+      >
+        <h2 class="text-lg text-white sm:text-2xl font-bold mb-4">
+          Comentarios de los usuarios
+        </h2>
+        <article id="comment-container" class="my-8">
+          <form id="comment-form" class="flex flex-col gap-4">
+            <textarea
+              name="comment"
+              id="comment"
+              rows="4"
+              placeholder="Escribe tu comentario..."
+              class="px-4 py-2 rounded-[10px] bg-accent-purple/10 border-[1px] border-accent-purple placeholder:text-gray-600 text-white"
+            ></textarea>
+            <p id="comment-error" class="hidden text-red-700 text-xs">
+              Debes escribir un comentario
+            </p>
+            <button
+              id="btn-comment"
+              type="submit"
+              class="p-[10px] shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] rounded-[40px] bg-electric-blue text-sm sm:text-lg hover:bg-accent-purple transition duration-200 w-40"
+            >
+              Comentar
+            </button>
+          </form>
+        </article>
+        <!-- Los comentarios se renderizarán aquí dinámicamente -->
+        <article
+          id="comments-container"
+          class="flex flex-col gap-8 items-start mt-4 rounded-[10px] bg-[#313684] border-2 px-4 py-10 min-h-24 sm:p-8 border-accent-purple"
+        ></article>
+      </section>
+      <!-- Sección Newsletter -->
+      <section
+        id="newsletter"
+        class="mx-4 sm:mx-8 min-w-[370px] border-accent-purple border-4 rounded-[20px] px-6 sm:px-8 py-5 sm:py-8 flex flex-col gap-8 sm:gap-12 my-8 sm:my-12"
+      >
+        <h2 class="font-bold text-2xl sm:text-[26px] text-white">
+          Suscríbete a nuestro Newsletter
+        </h2>
+        <p class="text-xs sm:text-[22px] font-normal leading-6 sm:leading-8">
+          Recibe las últimas novedades de MindDev y mantente informado acerca de
+          las últimas tendencias en tecnología, innovaciones de software y
+          consejos de desarrollo.
+        </p>
+        <form
+          class="flex flex-col gap-4 w-full sm:max-w-[600px] mx-auto mb-10 sm:mb-16"
+          id="form-newsletter"
+        >
+          <div class="flex flex-col sm:flex-row gap-4 w-full">
+            <div class="flex items-center gap-4 relative w-full">
+              <input
+                id="input-email"
+                type="email"
+                class="px-5 py-[10px] shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] rounded-[40px] bg-accent-purple/10 w-full placeholder:text-[14px] sm:placeholder:text-lg placeholder:text-white placeholder:pl-8 peer"
+                placeholder="Tu dirección de email"
+              />
+              <img
+                src="./assets/icons/envelope.svg"
+                alt="icono email"
+                class="w-6 mr-3 mb-4 absolute top-1/2 -translate-y-1/2 left-5 pointer-events-none transition-opacity peer-[:not(:placeholder-shown)]:opacity-0"
+              />
+            </div>
+            <button
+              type="submit"
+              class="p-[10px] shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] rounded-[40px] bg-electric-blue w-full font-bold text-base sm:text-xl hover:bg-accent-purple transition duration-200 sm:max-w-40"
+            >
+              Suscribirse
+            </button>
+          </div>
+          <span class="text-[11px] sm:text-base mt-2"
+            >Al suscribir, aceptas nuestras
+            <a
+              href="#"
+              class="text-electric-blue underline text-[11px] sm:text-base text-center cursor-pointer"
+              >Políticas de Privacidad</a
+            >
+            y
+            <a
+              class="text-electric-blue underline text-[11px] sm:text-base text-center cursor-pointer"
+              >Términos y Condiciones</a
+            ></span
+          >
+        </form>
+      </section>
     </section>
+    <!-- Footer -->
     <footer
       id="footer"
       class="relative bg-deep-blue pt-16 pb-8 border-t border-gray-700/50"

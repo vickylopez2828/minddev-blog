@@ -71,6 +71,15 @@
                 ]
             },
             {
+                "id": "tip_minddev",
+                "icon": {
+                    "content": "./assets/icons/magnet.svg",
+                    "tag": "img"
+                },
+                "tag": "aside",
+                "content": "crea contenido que responda directamente a preguntas comunes con subtítulos tipo “¿Cómo...?”, “¿Por qué...?” y “¿Cuál es la mejor forma de...?"
+            },
+            {
                 "id": "heading_two",
                 "tag": "h2",
                 "content": "2. La experiencia del usuario (UX) se consolida como factor de ranking"
