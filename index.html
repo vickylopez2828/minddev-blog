@@ -230,13 +230,13 @@
       class="lg:hidden bg-dark-alt py-3 px-4 border-b border-electric-blue/20 scrollbar-hide"
     >
       <div
-        class="mobile-index-container flex space-x-4 overflow-x-auto pb-2 scrollbar-hide"
+        class="mobile-index-container flex space-x-4 overflow-x-auto scrollbar-hide"
         id="mobile-index-list"
       >
         <!-- Los ítems del índice se generarán aquí dinámicamente -->
       </div>
     </div>
-    <main class="flex justify-between gap-7">
+    <main class="flex justify-between gap-7 pl-4">
       <article class="lg:pl-20 lg:pt-14" id="article-container">
         <!-- Aquí se insertará el contenido dinámicamente -->
       </article>
@@ -316,7 +316,7 @@
         </div>
       </aside>
     </main>
-    <section id="more-articles" class="p-2 sm:p-8 mx-auto w-full mt-8">
+    <section id="more-articles" class="p-4 sm:p-8 mx-auto w-full mt-4 sm:mt-8">
       <!-- Aquí se insertarán los artículos relacionados dinámicamente -->
       <h2 class="text-lg text-white sm:text-2xl font-bold">Más artículos</h2>
       <div class="relative">
@@ -382,140 +382,36 @@
         </div>
       </article>
     </section>
-    <section id="comments" class="p-2 sm:p-8 mx-auto w-full mt-8">
-      <h2 class="text-lg text-white sm:text-2xl font-bold">
+    <section id="comments-section" class="p-4 sm:p-8 mx-auto w-full mt-4 sm:mt-8">
+      <h2 class="text-lg text-white sm:text-2xl font-bold mb-4">
         Comentarios de los usuarios
-      </h2>
+      </h2>      
+      <article id="comment-container" class="my-8">
+        <form id="comment-form" class="flex flex-col gap-4">
+          <textarea 
+            name="comment" 
+            id="comment" 
+            rows="4" 
+            placeholder="Escribe tu comentario..."  
+            class="px-4 py-2 rounded-[10px] bg-accent-purple/10 border-[1px] border-accent-purple placeholder:text-gray-600 text-white"></textarea>
+          <p id="comment-error" class="hidden text-red-700 text-xs">Debes escribir un comentario</p>
+          <button 
+            id="btn-comment" 
+            type="submit" 
+            class="p-[10px] shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] rounded-[40px] bg-electric-blue text-sm sm:text-lg hover:bg-accent-purple transition duration-200 w-40">
+            Comentar
+          </button>
+        </form>
+      </article>  
+      <!-- Los comentarios se renderizarán aquí dinámicamente -->
       <article
         id="comments-container"
-        class="flex flex-col gap-8 items-start mt-4 rounded-[10px] bg-[#313684] border-2 px-4 py-10 min-h-24 sm:p-8 border-accent-purple"
-      >
-        <div class="flex gap-4 items-start w-full">
-          <img src="./assets/icons/user-circle.svg" alt="user" class="w-6" />
-          <div class="flex flex-col gap-2 w-full">
-            <!-- secccion de comentario -->
-            <div
-              id="comment"
-              class="bg-[#161D3C] p-[10px] rounded flex flex-col gap-3"
-            >
-              <div class="flex justify-between">
-                <p class="text-xs sm:text-sm">Juana Rabuffetti</p>
-                <span class="text-xs sm:text-sm hidden sm:block"
-                  >Hace un minuto</span
-                >
-              </div>
-              <p class="mb-4 text-sm sm:text-base">
-                Me encanto este articulo, muy completo y cierto.
-              </p>
-            </div>
-            <!-- seccion de interacciones -->
-            <div class="flex gap-4">
-              <div class="flex gap-1">
-                <button
-                  class="cursor-pointer hover:scale-125 transition-transform"
-                >
-                  <img
-                    src="./assets/icons/like.svg"
-                    alt="like"
-                    class="w-[10px] sm:w-4"
-                  />
-                </button>
-                <span class="text-[8px] sm:text-xs">1</span>
-              </div>
-              <div class="flex gap-1">
-                <button
-                  class="cursor-pointer hover:scale-125 transition-transform"
-                >
-                  <img
-                    src="./assets/icons/dislike.svg"
-                    alt="dislike"
-                    class="w-[10px] sm:w-4"
-                  />
-                </button>
-                <span class="text-[8px] sm:text-xs">1</span>
-              </div>
-              <div class="flex gap-1">
-                <button
-                  class="cursor-pointer hover:scale-125 transition-transform"
-                >
-                  <img
-                    src="./assets/icons/message-dots.svg"
-                    alt="response"
-                    class="w-[10px] sm:w-4"
-                  />
-                </button>
-                <span class="text-[8px] sm:text-xs">Responder</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flex gap-4 items-start w-full">
-          <img src="./assets/icons/user-circle.svg" alt="user" class="w-6" />
-          <div class="flex flex-col gap-2 w-full">
-            <!-- secccion de comentario -->
-            <div
-              id="comment"
-              class="bg-[#161D3C] p-[10px] rounded flex flex-col gap-3"
-            >
-              <div class="flex justify-between">
-                <p class="text-xs sm:text-sm">Juana Rabuffetti</p>
-                <span class="text-xs sm:text-sm hidden sm:block"
-                  >Hace un minuto</span
-                >
-              </div>
-              <p class="mb-4 text-sm sm:text-base">
-                Me encanto este articulo, muy completo y cierto.
-              </p>
-            </div>
-            <!-- seccion de interacciones -->
-            <div class="flex gap-4">
-              <div class="flex gap-1">
-                <button
-                  class="cursor-pointer hover:scale-125 transition-transform"
-                >
-                  <img
-                    src="./assets/icons/like.svg"
-                    alt="like"
-                    class="w-[10px] sm:w-4"
-                  />
-                </button>
-                <span class="text-[8px] sm:text-xs">1</span>
-              </div>
-              <div class="flex gap-1">
-                <button
-                  class="cursor-pointer hover:scale-125 transition-transform"
-                >
-                  <img
-                    src="./assets/icons/dislike.svg"
-                    alt="dislike"
-                    class="w-[10px] sm:w-4"
-                  />
-                </button>
-                <span class="text-[8px] sm:text-xs">1</span>
-              </div>
-              <div class="flex gap-1">
-                <button
-                  class="cursor-pointer hover:scale-125 transition-transform"
-                >
-                  <img
-                    src="./assets/icons/message-dots.svg"
-                    alt="response"
-                    class="w-[10px] sm:w-4"
-                  />
-                </button>
-                <span class="text-[8px] sm:text-xs">Responder</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button class="cursor-pointer text-xs sm:text-sm">
-          Ver más comentarios
-        </button>
+        class="flex flex-col gap-8 items-start mt-4 rounded-[10px] bg-[#313684] border-2 px-4 py-10 min-h-24 sm:p-8 border-accent-purple">
       </article>
     </section>
     <section
       id="newsletter"
-      class="mx-2 sm:mx-8 min-w-[370px] border-accent-purple border-4 rounded-[20px] px-8 py-5 flex flex-col gap-8 sm:gap-12 my-8 sm:my-12"
+      class="mx-4 sm:mx-8 min-w-[370px] border-accent-purple border-4 rounded-[20px] px-6 sm:px-8 py-5 sm:py-8 flex flex-col gap-8 sm:gap-12 my-8 sm:my-12"
     >
       <h2 class="font-bold text-2xl sm:text-[26px] text-white">
         Suscríbete a nuestro Newsletter
@@ -531,16 +427,16 @@
       >
         <div class="flex flex-col sm:flex-row gap-4 w-full">
           <div class="flex items-center gap-4 relative w-full">
-            <img
-              src="./assets/icons/envelope.svg"
-              alt="icono email"
-              class="w-6 mr-3 mb-4 absolute top-1/2 -translate-y-1/2 left-5"
-            />
             <input
               id="input-email"
               type="email"
-              class="px-5 py-[10px] shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] rounded-[40px] bg-accent-purple/10 w-full placeholder:text-[14px] sm:placeholder:text-lg placeholder:text-white placeholder:pl-8"
+              class="px-5 py-[10px] shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] rounded-[40px] bg-accent-purple/10 w-full placeholder:text-[14px] sm:placeholder:text-lg placeholder:text-white placeholder:pl-8 peer"
               placeholder="Tu dirección de email"
+            />
+            <img
+              src="./assets/icons/envelope.svg"
+              alt="icono email"
+              class="w-6 mr-3 mb-4 absolute top-1/2 -translate-y-1/2 left-5 pointer-events-none transition-opacity peer-[:not(:placeholder-shown)]:opacity-0"
             />
           </div>
           <button
@@ -917,6 +813,7 @@
       </div>
     </footer>
     <script src="./js/metatags.js"></script>
+    <script src="./js/form.js"></script>
     <script src="./js/header-updater.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/card.js"></script>
