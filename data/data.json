@@ -97,8 +97,12 @@
             },
             {
                 "id": "tip_minddev",
+                "icon": {
+                    "content": "./assets/icons/magnet.svg",
+                    "tag": "img"
+                },
                 "tag": "aside",
-                "content": "Tip MindDev: optimiza el diseño responsive, mejora los tiempos de carga y mantén una arquitectura clara. Recuerda: el SEO y el diseño UX/UI van de la mano"
+                "content": "Optimiza el diseño responsive, mejora los tiempos de carga y mantén una arquitectura clara. Recuerda: el SEO y el diseño UX/UI van de la mano"
             },
             {
                 "id": "heading_two",
@@ -127,8 +131,12 @@
             },
             {
                 "id": "tip_minddev",
+                "icon": {
+                    "content": "./assets/icons/file-text.svg",
+                    "tag": "img"
+                },
                 "tag": "aside",
-                "content": "Tip MindDev: estructura tus textos con marcado Schema FAQ para que los motores lean tus respuestas con precisión."
+                "content": "Estructura tus textos con marcado Schema FAQ para que los motores lean tus respuestas con precisión."
             },
             {
                 "id": "heading_two",
@@ -157,8 +165,12 @@
             },
             {
                 "id": "tip_minddev",
+                "icon": {
+                    "content": "./assets/icons/indifferent-square.svg",
+                    "tag": "img"
+                },
                 "tag": "aside",
-                "content": "Tip MindDev: combina IA + revisión humana = contenido escalable y de calidad."
+                "content": "Combina IA + revisión humana = contenido escalable y de calidad."
             },
             {
                 "id": "heading_two",
@@ -187,8 +199,12 @@
             },
             {
                 "id": "tip_minddev",
+                "icon": {
+                    "content": "./assets/icons/trending-up.svg",
+                    "tag": "img"
+                },
                 "tag": "aside",
-                "content": "Tip MindDev: monitorea tus KPIs (visitas orgánicas, CTR, conversiones) y ajusta tu estrategia mensualmente"
+                "content": "Monitorea tus KPIs (visitas orgánicas, CTR, conversiones) y ajusta tu estrategia mensualmente"
             },
             {
                 "id": "heading_two",
@@ -289,9 +305,13 @@
                 ]
             },
             {
-                "id": "paragraph",
-                "tag": "p",
-                "content": "Ejemplo real: empresas como **Google, eBay y Alibaba** utilizan Flutter para desarrollar aplicaciones multiplataforma con gran rendimiento visual."
+                "id": "tip_minddev",
+                "icon": {
+                    "content": "./assets/icons/lightning.svg",
+                    "tag": "img"
+                },
+                "tag": "aside",
+                "content": "Empresas como **Google, eBay y Alibaba** utilizan Flutter para desarrollar aplicaciones multiplataforma con gran rendimiento visual."
             },
             {
                 "id": "heading_two",
@@ -386,8 +406,12 @@
             },
             {
                 "id": "tip_minddev",
+                "icon": {
+                    "content": "./assets/icons/magnet.svg",
+                    "tag": "img"
+                },
                 "tag": "aside",
-                "content": "Tip MindDev: si buscas **reducir costos y lanzar rápido**, Flutter es ideal. Si tu app requiere **procesos complejos o uso intensivo del hardware**, el nativo es la opción más sólida."
+                "content": "Si buscas **reducir costos y lanzar rápido**, Flutter es ideal. Si tu app requiere **procesos complejos o uso intensivo del hardware**, el nativo es la opción más sólida."
             },
             {
                 "id": "heading_two",
@@ -421,14 +445,19 @@
                 "ariaLabel": "Cuándo elegir Nativo",
                 "items": [
                     "Aplicaciones que necesitan **máxima optimización de rendimiento** (juegos, apps de streaming, fintech).",
+                    "MPVs o versiones de prueba",
                     "Integraciones profundas con el sistema operativo.",
                     "Proyectos corporativos a gran escala que buscan **mayor control técnico**."
                 ]
             },
             {
-                "id": "paragraph",
-                "tag": "p",
-                "content": "Ejemplo: para una app de pedidos o servicios locales, Flutter te permitirá escalar rápido. Pero si desarrollas una app de realidad aumentada o de banca digital, el nativo será más robusto"
+                "id": "tip_minddev",
+                "icon": {
+                    "content": "./assets/icons/sparkles.svg",
+                    "tag": "img"
+                },
+                "tag": "aside",
+                "content": "Si estás creando una app de pedidos o servicios locales, Flutter te permitirá escalar rápido. Pero si desarrollas una app de realidad aumentada o de banca digital, el nativo será más robusto."
             },
             {
                 "id": "heading_two",
@@ -570,6 +599,10 @@
             },
             {
                 "id": "tip_minddev",
+                "icon": {
+                    "content": "./assets/icons/user.svg",
+                    "tag": "img"
+                },
                 "tag": "aside",
                 "content": "En MindDev, usamos esta metodología porque permite reaccionar rápidamente a los cambios del mercado y mantener la calidad en cada desarrollo."
             },
@@ -681,8 +714,12 @@
                 ]
             },
             {
-                "id": "paragraph",
-                "tag": "p",
+                "id": "tip_minddev",
+                "icon": {
+                    "content": "./assets/icons/aeroplane.svg",
+                    "tag": "img"
+                },
+                "tag": "aside",
                 "content": "MindDev no solo entrega proyectos; entrega resultados que crecen contigo."
             },
             {
