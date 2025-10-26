@@ -73,6 +73,9 @@
     overflow: hidden;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     color: #ffffff;
+    table-layout: fixed; /* Fuerza que las celdas respeten el ancho */
+    word-break: break-word; /* Permite que textos largos se rompan */
+
     
 }
 
@@ -282,6 +285,24 @@
 
 
 /* Responsive */
+@media (min-width: 375px) {
+    .minddev-table {
+        width: 100%;
+        zoom: 0.8;
+        
+    }
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+    .minddev-table {
+        width: 496px;
+        max-width: 100%;
+        transform: scale(1);
+        transform-origin: top left;
+    }
+}
+
 @media (max-width: 768px) {
     #article-container h1 {
         font-size: 2rem;
