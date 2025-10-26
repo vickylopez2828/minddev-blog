@@ -15,12 +15,24 @@ async function fetchArticleData(articleId) {
     }
     window.history.pushState({ articleId }, "", `?id=${articleId}`);
 
-    // ACTUALIZAR METATAGS DINÁMICOS - NUEVA LÍNEA
-    updateMetaTags(data);
+    // ACTUALIZAR METATAGS DINÁMICOS
+    if (typeof updateMetaTags === 'function') {
+        updateMetaTags(data);
+    }
+
+    // ACTUALIZAR HEADER DINÁMICO
+    if (typeof updateHeader === 'function') {
+        updateHeader(data);
+    }
 
     setupNavigation(articleId, dataArray.length);
     displayArticle(data);
-    generateArticleIndex();
+    
+    // Generar índice si la función existe
+    if (typeof generateArticleIndex === 'function') {
+        generateArticleIndex();
+    }
+    
     window.scrollTo({ top: 0, behavior: "smooth" });
   } catch (error) {
     console.error("Error fetching data:", error);
@@ -94,7 +106,6 @@ function displayArticle(content) {
           item.items.forEach((listItem) => {
             const li = document.createElement("li");
             li.innerHTML = marked.parseInline(listItem);
-            // li.textContent = listItem;
             element.appendChild(li);
           });
         }
@@ -109,7 +120,6 @@ function displayArticle(content) {
 
         const tipContent = document.createElement("p");
         tipContent.innerHTML = marked.parseInline(item.content);
-        // tipContent.textContent = item.content;
         element.appendChild(tipContent);
         break;
       case "table":
@@ -173,3 +183,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const articleId = parseInt(urlParams.get("id")) || 1;
   fetchArticleData(articleId);
 });
+
+// Hacer funciones disponibles globalmente si es necesario
+window.fetchArticleData = fetchArticleData;
+window.setupNavigation = setupNavigation;
+window.displayArticle = displayArticle;
