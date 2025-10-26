@@ -7,6 +7,12 @@
     line-height: 1.7;
 }
 
+#article-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Títulos */
 #article-container h1 {
     color: #ffffff;
