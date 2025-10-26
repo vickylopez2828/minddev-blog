@@ -13,6 +13,13 @@
             "schemaDescription": "En 2025, el SEO evoluciona hacia la IA conversacional, la búsqueda semántica y la experiencia de usuario. Descubre las 5 tendencias clave para dominar el posicionamiento orgánico.",
             "schemaDatePublished": "2024-01-01"
         },
+        "header-banner": "./assets/images/banner-one",
+        "clasification": {
+            "image": "./assets/icons/trending-up.svg",
+            "title": "SEO & MARKETING"
+        },
+        "date-published": "2024-05-10T00:00:00",
+        "time-of-reading": "6 minutos",
         "navigation": {
             "prev": null,
             "next": 2
@@ -223,6 +230,13 @@
             "schemaDescription": "Descubre las diferencias entre Flutter y desarrollo nativo para aplicaciones móviles en 2025.",
             "schemaDatePublished": "2024-01-02"
         },
+        "header-banner": "./assets/images/banner-two",
+        "clasification": {
+            "image": "./assets/icons/mobile.svg",
+            "title": "DESARROLLO MÓVIL"
+        },
+        "date-published": "2024-03-25T00:00:00",
+        "time-of-reading": "8 minutos",
         "navigation": {
             "prev": 1,
             "next": 3
@@ -486,6 +500,13 @@
             "schemaDescription": "Descubre cómo MindDev Perú aplica la metodología ágil para desarrollar soluciones digitales eficientes, escalables y alineadas con las necesidades de cada cliente.",
             "schemaDatePublished": "2024-01-03"
         },
+        "header-banner": "./assets/images/banner-three",
+        "clasification": {
+            "image": "./assets/icons/code.svg",
+            "title": "METODOLOGÍA"
+        },
+        "time-of-reading": "12 minutos",
+        "date-published": "2025-03-07T00:00:00",
         "navigation": {
             "prev": 2,
             "next": null
