@@ -532,7 +532,7 @@
     </section>
     <section
       id="newsletter"
-      class="mx-2 sm:mx-8 min-w-[370px] border-accent-purple border-4 rounded-[20px] px-8 py-5 flex flex-col gap-8 sm:gap-12 my-8 sm:my-12"
+      class="mx-2 sm:mx-8 min-w-[370px] border-accent-purple border-4 rounded-[20px] px-8 py-5 sm:py-8 flex flex-col gap-8 sm:gap-12 my-8 sm:my-12"
     >
       <h2 class="font-bold text-2xl sm:text-[26px] text-white">
         Suscríbete a nuestro Newsletter
@@ -548,16 +548,16 @@
       >
         <div class="flex flex-col sm:flex-row gap-4 w-full">
           <div class="flex items-center gap-4 relative w-full">
-            <img
-              src="./assets/icons/envelope.svg"
-              alt="icono email"
-              class="w-6 mr-3 mb-4 absolute top-1/2 -translate-y-1/2 left-5"
-            />
             <input
               id="input-email"
               type="email"
-              class="px-5 py-[10px] shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] rounded-[40px] bg-accent-purple/10 w-full placeholder:text-[14px] sm:placeholder:text-lg placeholder:text-white placeholder:pl-8"
+              class="px-5 py-[10px] shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] rounded-[40px] bg-accent-purple/10 w-full placeholder:text-[14px] sm:placeholder:text-lg placeholder:text-white placeholder:pl-8 peer"
               placeholder="Tu dirección de email"
+            />
+            <img
+              src="./assets/icons/envelope.svg"
+              alt="icono email"
+              class="w-6 mr-3 mb-4 absolute top-1/2 -translate-y-1/2 left-5 pointer-events-none transition-opacity peer-[:not(:placeholder-shown)]:opacity-0"
             />
           </div>
           <button
