@@ -285,8 +285,7 @@
 @media (min-width: 375px) {
     .minddev-table {
         width: 100%;
-        transform: scale(0.76);
-        transform-origin: top left;
+        zoom: 0.8;
         
     }
 }
