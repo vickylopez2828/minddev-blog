@@ -1,6 +1,18 @@
 [
     {
         "id": 1,
+        "metaTags": {
+            "title": "5 tendencias de SEO que debes dominar en 2025",
+            "description": "En 2025, el SEO evoluciona hacia la IA conversacional, la búsqueda semántica y la experiencia de usuario. Descubre las 5 tendencias clave para dominar el posicionamiento orgánico.",
+            "keywords": "SEO 2025, tendencias SEO 2025, posicionamiento orgánico, inteligencia artificial y SEO, búsqueda semántica, SEO conversacional, estrategias de SEO, marketing digital 2025, IA y SEO, MindDev Perú",
+            "ogTitle": "5 tendencias de SEO que debes dominar en 2025",
+            "ogDescription": "En 2025, el SEO evoluciona hacia la IA conversacional, la búsqueda semántica y la experiencia de usuario. Descubre las 5 tendencias clave para dominar el posicionamiento orgánico.",
+            "ogImage": "./assets/images/icon-emp/banner-seo-2025.webp",
+            "ogUrl": "https://minddevperu.com/articulo-seo-2025",
+            "schemaHeadline": "5 tendencias de SEO que debes dominar en 2025",
+            "schemaDescription": "En 2025, el SEO evoluciona hacia la IA conversacional, la búsqueda semántica y la experiencia de usuario. Descubre las 5 tendencias clave para dominar el posicionamiento orgánico.",
+            "schemaDatePublished": "2024-01-01"
+        },
         "navigation": {
             "prev": null,
             "next": 2
@@ -198,7 +210,282 @@
         ]
     },
     {
+        "id": 2,
+        "metaTags": {
+            "title": "Flutter vs. Nativo: ¿Cuál elegir para tu App?",
+            "description": "Descubre las diferencias entre Flutter y desarrollo nativo para aplicaciones móviles. Guía completa para elegir la mejor tecnología en 2025 según tus necesidades.",
+            "keywords": "Flutter, desarrollo nativo, aplicaciones móviles, React Native, iOS, Android, desarrollo multiplataforma, MindDev Perú",
+            "ogTitle": "Flutter vs. Nativo: ¿Cuál elegir para tu App?",
+            "ogDescription": "Guía completa para elegir entre Flutter y desarrollo nativo para tus aplicaciones móviles en 2025.",
+            "ogImage": "./assets/images/icon-emp/banner-flutter-vs-nativo.webp",
+            "ogUrl": "https://minddevperu.com/articulo-flutter-vs-nativo",
+            "schemaHeadline": "Flutter vs. Nativo: ¿Cuál elegir para tu App?",
+            "schemaDescription": "Descubre las diferencias entre Flutter y desarrollo nativo para aplicaciones móviles en 2025.",
+            "schemaDatePublished": "2024-01-02"
+        },
+        "navigation": {
+            "prev": 1,
+            "next": 3
+        },
+        "articleContent": [
+            {
+                "id": "heading_one",
+                "tag": "h1",
+                "content": "**Flutter vs. Nativo: ¿Cuál elegir para tu App?**"
+            },
+            {
+                "id": "heading_two",
+                "tag": "h2",
+                "content": "**Introducción**"
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "El desarrollo móvil en 2025 avanza más rápido que nunca. Las empresas buscan crear **aplicaciones modernas, rápidas y multiplataforma**, pero la pregunta sigue siendo la misma: ¿Conviene desarrollar una app con Flutter o hacerlo de forma nativa?"
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "En **MindDev Perú** te explicamos las diferencias entre ambos enfoques, sus ventajas, desventajas y en qué casos cada uno es la mejor opción. Si estás por lanzar tu proyecto móvil, esta guía te ayudará a **elegir con criterio técnico y estratégico**."
+            },
+            {
+                "id": "heading_two",
+                "tag": "h2",
+                "content": "**1. ¿Qué es Flutter y cómo funciona?**"
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "**Flutter** es un framework de código abierto creado por Google que permite desarrollar aplicaciones móviles, web y de escritorio con una **sola base de código**."
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "Sus principales características:"
+            },
+            {
+                "id": "unordered_list",
+                "tag": "ul",
+                "ariaLabel": "Características de Flutter",
+                "items": [
+                    "Utiliza el lenguaje **Dart**.",
+                    "Compila de forma nativa (no es un contenedor web).",
+                    "Ofrece **rendimiento cercano al nativo** y una excelente experiencia de usuario.",
+                    "Permite desarrollar **rápidamente** con su función Hot Reload."
+                ]
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "Ejemplo real: empresas como **Google, eBay y Alibaba** utilizan Flutter para desarrollar aplicaciones multiplataforma con gran rendimiento visual."
+            },
+            {
+                "id": "heading_two",
+                "tag": "h2",
+                "content": "**2. ¿Qué implica el desarrollo nativo?**"
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "El desarrollo **nativo** consiste en crear una app específicamente para cada sistema operativo:"
+            },
+            {
+                "id": "unordered_list",
+                "tag": "ul",
+                "ariaLabel": "Plataformas nativas",
+                "items": [
+                    "**Android**: usando Kotlin o Java.",
+                    "**iOS**: usando Swift u Objective-C."
+                ]
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "Sus principales ventajas:"
+            },
+            {
+                "id": "unordered_list",
+                "tag": "ul",
+                "ariaLabel": "Ventajas del desarrollo nativo",
+                "items": [
+                    "**Máximo rendimiento** y acceso completo a las APIs del dispositivo.",
+                    "**Experiencia de usuario fluida**, ajustada a las guías de diseño de cada plataforma.",
+                    "Mayor estabilidad y escalabilidad para proyectos complejos o corporativos."
+                ]
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "Sin embargo, requiere **dos equipos de desarrollo** (uno para Android y otro para iOS), lo que **aumenta el costo y el tiempo**."
+            },
+            {
+                "id": "heading_two",
+                "tag": "h2",
+                "content": "**3. Comparativa técnica: Flutter vs. Nativo**"
+            },
+            {
+                "id": "table",
+                "tag": "table",
+                "ariaLabel": "Comparativa Flutter vs Nativo",
+                "headers": [
+                    "**Aspecto**",
+                    "**Flutter**",
+                    "**Nativo**"
+                ],
+                "rows": [
+                    [
+                        "**Lenguaje**",
+                        "Dart",
+                        "Kotlin / Swift"
+                    ],
+                    [
+                        "**Código base**",
+                        "Único para iOS y Android",
+                        "Uno por cada plataforma"
+                    ],
+                    [
+                        "**Tiempo de desarrollo**",
+                        "Rápido (≈40% menos en promedio)",
+                        "Más largo"
+                    ],
+                    [
+                        "**Rendimiento**",
+                        "Alto (muy cercano al nativo)",
+                        "Máximo"
+                    ],
+                    [
+                        "**Mantenimiento**",
+                        "Sencillo y centralizado",
+                        "Doble esfuerzo"
+                    ],
+                    [
+                        "**Experiencia de usuario (UX/UI)**",
+                        "Muy personalizable",
+                        "Integración perfecta con cada sistema"
+                    ],
+                    [
+                        "**Costos**",
+                        "Más económico",
+                        "Más elevado"
+                    ]
+                ]
+            },
+            {
+                "id": "tip_minddev",
+                "tag": "aside",
+                "content": "Tip MindDev: si buscas **reducir costos y lanzar rápido**, Flutter es ideal. Si tu app requiere **procesos complejos o uso intensivo del hardware**, el nativo es la opción más sólida."
+            },
+            {
+                "id": "heading_two",
+                "tag": "h2",
+                "content": "**4. Casos de uso recomendados**"
+            },
+            {
+                "id": "heading_three",
+                "tag": "h3",
+                "content": "**Cuándo elegir Flutter**"
+            },
+            {
+                "id": "unordered_list",
+                "tag": "ul",
+                "ariaLabel": "Cuándo elegir Flutter",
+                "items": [
+                    "Startups o proyectos con **presupuesto limitado**.",
+                    "MVPs o versiones de prueba.",
+                    "Aplicaciones que no dependen de funciones avanzadas del hardware.",
+                    "Proyectos que requieren **lanzamiento rápido** en ambas plataformas."
+                ]
+            },
+            {
+                "id": "heading_three",
+                "tag": "h3",
+                "content": "**Cuándo elegir desarrollo nativo**"
+            },
+            {
+                "id": "unordered_list",
+                "tag": "ul",
+                "ariaLabel": "Cuándo elegir Nativo",
+                "items": [
+                    "Aplicaciones que necesitan **máxima optimización de rendimiento** (juegos, apps de streaming, fintech).",
+                    "Integraciones profundas con el sistema operativo.",
+                    "Proyectos corporativos a gran escala que buscan **mayor control técnico**."
+                ]
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "Ejemplo: para una app de pedidos o servicios locales, Flutter te permitirá escalar rápido. Pero si desarrollas una app de realidad aumentada o de banca digital, el nativo será más robusto"
+            },
+            {
+                "id": "heading_two",
+                "tag": "h2",
+                "content": "**5. ¿Cuál es el futuro del desarrollo móvil?**"
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "En 2025 la tendencia apunta a una **combinación inteligente**: usar Flutter para prototipar y validar ideas, y luego migrar a nativo cuando el proyecto lo requiera."
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "Ambas tecnologías seguirán evolucionando, pero **la decisión debe basarse en el objetivo del negocio** y no solo en la tecnología."
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "En **MindDev Perú**, ayudamos a nuestros clientes a elegir la mejor estrategia tecnológica según su visión, escalabilidad y recursos."
+            },
+            {
+                "id": "heading_two",
+                "tag": "h2",
+                "content": "**Conclusión**"
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "Tanto **Flutter** como el **desarrollo nativo** son excelentes opciones, pero sirven a **necesidades diferentes**:"
+            },
+            {
+                "id": "unordered_list",
+                "tag": "ul",
+                "ariaLabel": "Conclusión: Cuándo elegir Flutter vs Nativo",
+                "items": [
+                    "Si quieres **velocidad, bajo costo y multiplataforma**, elige **Flutter**.",
+                    "Si buscas **rendimiento máximo y personalización completa**, elige **Nativo**."
+                ]
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "Lo importante es contar con un equipo que entienda ambos enfoques y pueda orientarte hacia la mejor decisión técnica."
+            },
+            {
+                "id": "paragraph",
+                "tag": "p",
+                "content": "En **MindDev Perú**, desarrollamos **apps modernas, rápidas y escalables**, combinando rendimiento y diseño."
+            },
+            {
+                "id": "call_to_action",
+                "tag": "blockquote",
+                "content": "Contáctanos y descubre qué tecnología se adapta mejor a tu idea."
+            }
+        ]
+    },
+    {
         "id": 3,
+        "metaTags": {
+            "title": "Cómo implementamos la Metodología Ágil en MindDev",
+            "description": "Descubre cómo MindDev Perú aplica la metodología ágil para desarrollar soluciones digitales eficientes, escalables y alineadas con las necesidades de cada cliente.",
+            "keywords": "metodología ágil, desarrollo ágil, scrum, kanban, MindDev Perú, desarrollo de software, gestión de proyectos",
+            "ogTitle": "Cómo implementamos la Metodología Ágil en MindDev",
+            "ogDescription": "Descubre cómo MindDev Perú aplica la metodología ágil para desarrollar soluciones digitales eficientes y escalables.",
+            "ogImage": "./assets/images/icon-emp/banner-metodologia-agil.webp",
+            "ogUrl": "https://minddevperu.com/articulo-metodologia-agil",
+            "schemaHeadline": "Cómo implementamos la Metodología Ágil en MindDev",
+            "schemaDescription": "Descubre cómo MindDev Perú aplica la metodología ágil para desarrollar soluciones digitales eficientes, escalables y alineadas con las necesidades de cada cliente.",
+            "schemaDatePublished": "2024-01-03"
+        },
         "navigation": {
             "prev": 2,
             "next": null
@@ -500,257 +787,6 @@
                 "id": "call_to_action",
                 "tag": "blockquote",
                 "content": "¿Buscas un equipo ágil y comprometido con tus resultados? Contáctanos en **MindDev Perú** y transforma tu idea en una solución digital sólida."
-            }
-        ]
-    },
-    {
-        "id": 2,
-        "navigation": {
-            "prev": 1,
-            "next": 3
-        },
-        "articleContent": [
-            {
-                "id": "heading_one",
-                "tag": "h1",
-                "content": "**Flutter vs. Nativo: ¿Cuál elegir para tu App?**"
-            },
-            {
-                "id": "heading_two",
-                "tag": "h2",
-                "content": "**Introducción**"
-            },
-            {
-                "id": "paragraph",
-                "tag": "p",
-                "content": "El desarrollo móvil en 2025 avanza más rápido que nunca. Las empresas buscan crear **aplicaciones modernas, rápidas y multiplataforma**, pero la pregunta sigue siendo la misma: ¿Conviene desarrollar una app con Flutter o hacerlo de forma nativa?"
-            },
-            {
-                "id": "paragraph",
-                "tag": "p",
-                "content": "En **MindDev Perú** te explicamos las diferencias entre ambos enfoques, sus ventajas, desventajas y en qué casos cada uno es la mejor opción. Si estás por lanzar tu proyecto móvil, esta guía te ayudará a **elegir con criterio técnico y estratégico**."
-            },
-            {
-                "id": "heading_two",
-                "tag": "h2",
-                "content": "**1. ¿Qué es Flutter y cómo funciona?**"
-            },
-            {
-                "id": "paragraph",
-                "tag": "p",
-                "content": "**Flutter** es un framework de código abierto creado por Google que permite desarrollar aplicaciones móviles, web y de escritorio con una **sola base de código**."
-            },
-            {
-                "id": "paragraph",
-                "tag": "p",
-                "content": "Sus principales características:"
-            },
-            {
-                "id": "unordered_list",
-                "tag": "ul",
-                "ariaLabel": "Características de Flutter",
-                "items": [
-                    "Utiliza el lenguaje **Dart**.",
-                    "Compila de forma nativa (no es un contenedor web).",
-                    "Ofrece **rendimiento cercano al nativo** y una excelente experiencia de usuario.",
-                    "Permite desarrollar **rápidamente** con su función Hot Reload."
-                ]
-            },
-            {
-                "id": "paragraph",
-                "tag": "p",
-                "content": "Ejemplo real: empresas como **Google, eBay y Alibaba** utilizan Flutter para desarrollar aplicaciones multiplataforma con gran rendimiento visual."
-            },
-            {
-                "id": "heading_two",
-                "tag": "h2",
-                "content": "**2. ¿Qué implica el desarrollo nativo?**"
-            },
-            {
-                "id": "paragraph",
-                "tag": "p",
-                "content": "El desarrollo **nativo** consiste en crear una app específicamente para cada sistema operativo:"
-            },
-            {
-                "id": "unordered_list",
-                "tag": "ul",
-                "ariaLabel": "Plataformas nativas",
-                "items": [
-                    "**Android**: usando Kotlin o Java.",
-                    "**iOS**: usando Swift u Objective-C."
-                ]
-            },
-            {
-                "id": "paragraph",
-                "tag": "p",
-                "content": "Sus principales ventajas:"
-            },
-            {
-                "id": "unordered_list",
-                "tag": "ul",
-                "ariaLabel": "Ventajas del desarrollo nativo",
-                "items": [
-                    "**Máximo rendimiento** y acceso completo a las APIs del dispositivo.",
-                    "**Experiencia de usuario fluida**, ajustada a las guías de diseño de cada plataforma.",
-                    "Mayor estabilidad y escalabilidad para proyectos complejos o corporativos."
-                ]
-            },
-            {
-                "id": "paragraph",
-                "tag": "p",
-                "content": "Sin embargo, requiere **dos equipos de desarrollo** (uno para Android y otro para iOS), lo que **aumenta el costo y el tiempo**."
-            },
-            {
-                "id": "heading_two",
-                "tag": "h2",
-                "content": "**3. Comparativa técnica: Flutter vs. Nativo**"
-            },
-            {
-                "id": "table",
-                "tag": "table",
-                "ariaLabel": "Comparativa Flutter vs Nativo",
-                "headers": [
-                    "**Aspecto**",
-                    "**Flutter**",
-                    "**Nativo**"
-                ],
-                "rows": [
-                    [
-                        "**Lenguaje**",
-                        "Dart",
-                        "Kotlin / Swift"
-                    ],
-                    [
-                        "**Código base**",
-                        "Único para iOS y Android",
-                        "Uno por cada plataforma"
-                    ],
-                    [
-                        "**Tiempo de desarrollo**",
-                        "Rápido (≈40% menos en promedio)",
-                        "Más largo"
-                    ],
-                    [
-                        "**Rendimiento**",
-                        "Alto (muy cercano al nativo)",
-                        "Máximo"
-                    ],
-                    [
-                        "**Mantenimiento**",
-                        "Sencillo y centralizado",
-                        "Doble esfuerzo"
-                    ],
-                    [
-                        "**Experiencia de usuario (UX/UI)**",
-                        "Muy personalizable",
-                        "Integración perfecta con cada sistema"
-                    ],
-                    [
-                        "**Costos**",
-                        "Más económico",
-                        "Más elevado"
-                    ]
-                ]
-            },
-            {
-                "id": "tip_minddev",
-                "tag": "aside",
-                "content": "Tip MindDev: si buscas **reducir costos y lanzar rápido**, Flutter es ideal. Si tu app requiere **procesos complejos o uso intensivo del hardware**, el nativo es la opción más sólida."
-            },
-            {
-                "id": "heading_two",
-                "tag": "h2",
-                "content": "**4. Casos de uso recomendados**"
-            },
-            {
-                "id": "heading_three",
-                "tag": "h3",
-                "content": "**Cuándo elegir Flutter**"
-            },
-            {
-                "id": "unordered_list",
-                "tag": "ul",
-                "ariaLabel": "Cuándo elegir Flutter",
-                "items": [
-                    "Startups o proyectos con **presupuesto limitado**.",
-                    "MVPs o versiones de prueba.",
-                    "Aplicaciones que no dependen de funciones avanzadas del hardware.",
-                    "Proyectos que requieren **lanzamiento rápido** en ambas plataformas."
-                ]
-            },
-            {
-                "id": "heading_three",
-                "tag": "h3",
-                "content": "**Cuándo elegir desarrollo nativo**"
-            },
-            {
-                "id": "unordered_list",
-                "tag": "ul",
-                "ariaLabel": "Cuándo elegir Nativo",
-                "items": [
-                    "Aplicaciones que necesitan **máxima optimización de rendimiento** (juegos, apps de streaming, fintech).",
-                    "Integraciones profundas con el sistema operativo.",
-                    "Proyectos corporativos a gran escala que buscan **mayor control técnico**."
-                ]
-            },
-            {
-                "id": "paragraph",
-                "tag": "p",
-                "content": "Ejemplo: para una app de pedidos o servicios locales, Flutter te permitirá escalar rápido. Pero si desarrollas una app de realidad aumentada o de banca digital, el nativo será más robusto"
-            },
-            {
-                "id": "heading_two",
-                "tag": "h2",
-                "content": "**5. ¿Cuál es el futuro del desarrollo móvil?**"
-            },
-            {
-                "id": "paragraph",
-                "tag": "p",
-                "content": "En 2025 la tendencia apunta a una **combinación inteligente**: usar Flutter para prototipar y validar ideas, y luego migrar a nativo cuando el proyecto lo requiera."
-            },
-            {
-                "id": "paragraph",
-                "tag": "p",
-                "content": "Ambas tecnologías seguirán evolucionando, pero **la decisión debe basarse en el objetivo del negocio** y no solo en la tecnología."
-            },
-            {
-                "id": "paragraph",
-                "tag": "p",
-                "content": "En **MindDev Perú**, ayudamos a nuestros clientes a elegir la mejor estrategia tecnológica según su visión, escalabilidad y recursos."
-            },
-            {
-                "id": "heading_two",
-                "tag": "h2",
-                "content": "**Conclusión**"
-            },
-            {
-                "id": "paragraph",
-                "tag": "p",
-                "content": "Tanto **Flutter** como el **desarrollo nativo** son excelentes opciones, pero sirven a **necesidades diferentes**:"
-            },
-            {
-                "id": "unordered_list",
-                "tag": "ul",
-                "ariaLabel": "Conclusión: Cuándo elegir Flutter vs Nativo",
-                "items": [
-                    "Si quieres **velocidad, bajo costo y multiplataforma**, elige **Flutter**.",
-                    "Si buscas **rendimiento máximo y personalización completa**, elige **Nativo**."
-                ]
-            },
-            {
-                "id": "paragraph",
-                "tag": "p",
-                "content": "Lo importante es contar con un equipo que entienda ambos enfoques y pueda orientarte hacia la mejor decisión técnica."
-            },
-            {
-                "id": "paragraph",
-                "tag": "p",
-                "content": "En **MindDev Perú**, desarrollamos **apps modernas, rápidas y escalables**, combinando rendimiento y diseño."
-            },
-            {
-                "id": "call_to_action",
-                "tag": "blockquote",
-                "content": "Contáctanos y descubre qué tecnología se adapta mejor a tu idea."
             }
         ]
     }
