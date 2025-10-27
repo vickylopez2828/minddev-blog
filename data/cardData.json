@@ -45,19 +45,19 @@
         "link": "?id=3"
     },
     {
-        "id":3,
-        "title":"Mejores Prácticas para la Seguridad en Aplicaciones Web",
+        "id":6,
+        "title":"Las Aplicaciones Web",
         "icon":"file-text",
-        "category":"Seguridad",
+        "category":"Desarrollo móvil",
         "datetime":"05 dic 2025",
         "readingTime":"7 min.",
         "link": "?id=2"
     },
     {
-        "id":6,
-        "title":"Mejores Prácticas para la Seguridad en Aplicaciones Web",
+        "id":7,
+        "title":"Últimas tendencias web",
         "icon":"trending-up",
-        "category":"Seguridad",
+        "category":"Desarrollo móvil",
         "datetime":"05 dic 2025",
         "readingTime":"7 min.",
         "link": "?id=1"
