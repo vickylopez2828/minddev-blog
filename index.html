@@ -149,13 +149,29 @@
       .mobile-index-container::-webkit-scrollbar {
         display: none;
       }
+ 
+      body {
+        overflow-x: clip !important;
+        overflow-y: auto !important;
+        /* O simplemente: */
+        overflow: visible !important;
+      }
+      #article-index {
+        position: sticky;
+        top: 270px;
+        height: auto;
+      }
+      #index-list{
+        height: auto;
+      }
+    
     </style>
   </head>
 
   <body class="bg-deep-blue text-white-pure font-[Inter]">
     <!-- Header -->
     <header
-      class="sticky top-0 z-40 transition-all duration-300 bg-deep-blue/95 backdrop-blur-sm shadow-lg pb-2"
+      class="sticky top-0 z-40 transition-all duration-300 bg-deep-blue/95 backdrop-blur-sm shadow-lg py-2"
       id="main-header"
     >
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
@@ -208,23 +224,23 @@
       class="hero-banner w-full h-60 lg:h-96 bg-cover flex flex-col"
       style="background-image: url(/assets/images/hero-banner.png)"
     >
-      <nav id="article-navigation" class="flex justify-between pt-6 w-full">
-        <div class="hover:scale-110 transition-transform">
+      <nav id="article-navigation" class="flex justify-between pt-6 w-full px-4 md:px-20">
+        <div class="hover:scale-110 transition-transform flex gap-2 items-center">
           <img
-            class="inline pr-3 sm:pr-6 md:pr-12 lg:pr-24 color-electric-blue rotate-180"
+            class="inline color-electric-blue rotate-180 w-2 md:w-3"
             src="assets/icons/chevron-right.svg"
             alt=""
           />
-          <a id="prev" class="text-electric-blue cursor-pointer pl-2"
+          <a id="prev" class="text-electric-blue cursor-pointer pl-2 text-xs sm:text-sm md:text-lg"
             >Articulo anterior</a
           >
         </div>
-        <div class="hover:scale-110 transition-transform">
-          <a id="next" class="text-electric-blue cursor-pointer pr-2"
+        <div class="hover:scale-110 transition-transform flex gap-2 items-center">
+          <a id="next" class="text-electric-blue cursor-pointer text-xs sm:text-lg"
             >Siguiente articulo</a
           >
           <img
-            class="inline pr-3 sm:pr-6 md:pr-12 lg:pr-24"
+            class="inline w-2 md:w-3"
             src="assets/icons/chevron-right.svg"
             alt=""
           />
@@ -237,36 +253,31 @@
         <!-- Los elementos del header se generarán dinámicamente aquí -->
       </section>
     </section>
-    <!-- Índice mobile -->
-    <div
-      id="mobile-index-container"
-      class="lg:hidden bg-dark-alt py-3 px-4 border-b border-electric-blue/20 scrollbar-hide mb-4"
-    >
-      <div
-        class="mobile-index-container flex space-x-4 overflow-x-auto scrollbar-hide"
-        id="mobile-index-list"
-      >
-        <!-- Los ítems del índice se generarán aquí dinámicamente -->
-      </div>
-    </div>
-    <main class="flex justify-between gap-7 pl-4">
-      <!-- Contenido principal del blog -->
-      <article
-        class="w-[296px] sm:w-[496px] md:w-[856px] lg:w-[1050px] lg:pl-20 lg:pt-14"
-        id="article-container"
-      >
-        <!-- Aquí se insertará el contenido dinámicamente -->
-      </article>
-      <!-- Redes -->
+    
+    <main class="flex flex-col md:flex-row justify-between gap-0 md:gap-7 mt-4 relative">
+      <!-- Índice mobile -->
+        <div
+          id="mobile-index-container"
+          class="sticky top-[80px] w-full z-30 md:hidden bg-dark-alt py-3 px-4 border-b border-electric-blue/20 scrollbar-hide mb-4"
+        >
+          <div
+            class="mobile-index-container flex space-x-4 overflow-x-auto scrollbar-hide"
+            id="mobile-index-list"
+          >
+            <!-- Los ítems del índice se generarán aquí dinámicamente -->
+          </div>
+        </div>
+      
       <aside
-        class="pr-3 rounded-xl md:pl-3 lg:w-72 lg:flex lg:flex-col lg:pt-3 lg:mt-14 lg:mr-20 lg:gap-6"
+        class="sm:pr-3 md:flex-shrink-0 hidden md:block md:order-2 rounded-xl md:pl-3 md:w-72 mr-4 lg:mr-20 mt-12"
       >
+        <!-- Redes -->
         <!-- Sección Compartir -->
         <div
-          class="lg:bg-[#151E3C] lg:rounded-xl lg:pr-6 lg:pl-6 lg:h-40 lg:flex lg:flex-col lg:justify-center lg:items-center"
+          class="md:bg-[#151E3C] order-2 absolute right-2 top-[75px] md:sticky md:top-[90px] md:rounded-xl md:pr-6 md:pl-6 md:h-40 md:flex md:flex-col md:justify-center md:items-center md:mb-8"
         >
-          <p class="hidden text-center lg:block lg:mb-6">
-            Comparte este vinculo
+          <p class="text-center mb-6">
+            Comparte este artículo
           </p>
           <div
             class=" pt-3 sm:pt-10 sm:pr-1 sm:scale-150 md:flex md:pt-3 md:scale-125 md:justify-center md:pb-2 lg:scale-100 lg:pt-0 lg:items-center"
@@ -319,26 +330,87 @@
             </button>
           </div>
         </div>
-
         <!-- Índice del artículo -->
         <div
           id="article-index"
-          class="bg-[#151E3C] rounded-xl p-6 lg:mt-0 hidden md:block"
+          class="bg-[#151E3C] rounded-xl p-6 hidden md:block"
         >
           <h3
             class="text-lg font-bold text-white-pure mb-4 border-b border-electric-blue/50 pb-2"
           >
             Índice del Artículo
           </h3>
-          <nav id="index-list" class="space-y-2 max-h-80 overflow-y-auto pr-2">
+          <nav id="index-list" class="space-y-2 overflow-y-auto max-h-72 pr-2">
             <!-- Índice generado dinámicamente -->
           </nav>
         </div>
       </aside>
+      <!-- Redes Mobile-->
+      <div
+        class="order-2 absolute right-2 top-[75px] md:hidden"
+      >
+        <div
+          class=" pt-3"
+        >
+          <a
+            href="https://www.linkedin.com/company/minddev-peru"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cursor pointer hover:scale-110 transition-transform"
+          >
+            <img
+              class=""
+              src="/assets/icons/share-linkedin.svg"
+              alt=""
+            />
+          </a>
+          <a
+            href="https://x.com/MinddevPeru"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cursor pointer hover:scale-110 transition-transform"
+          >
+            <img
+              class=""
+              src="/assets/icons/share-x.svg"
+              alt=""
+            />
+          </a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=contacto@minddevperu.com&su=Consulta&body=Hola%2C%20quiero%20más%20información."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cursor pointer hover:scale-110 transition-transform"
+          >
+            <img
+              class=""
+              src="/assets/icons/share-mail.svg"
+              alt=""
+            />
+          </a>
+          <button
+            onclick="sharePage()"
+            class="cursor pointer hover:scale-110 transition-transform"
+          >
+            <img
+              class=""
+              src="assets/icons/share.svg"
+              alt=""
+            />
+          </button>
+        </div>
+      </div>
+      <!-- Contenido principal del blog -->
+      <article
+        class="w-full md:w-[856px] md:order-1 lg:w-[1050px] px-4 lg:pl-20 lg:pt-14 p-4 sm:p-8"
+        id="article-container"
+      >
+        <!-- Aquí se insertará el contenido dinámicamente -->
+      </article>
     </main>
-    <section class="lg:pl-20">
+    <section class="lg:px-20">
       <!-- Sección Más Artículos -->
-      <section id="more-articles" class="p-4 sm:p-8 mx-auto w-full mt-4 sm:mt-8">
+      <section id="more-articles" class="px-4 sm:px-8 lg:p-0 mx-auto w-full mt-4 sm:mt-6 sm:pr-8">
         <!-- Aquí se insertarán los artículos relacionados dinámicamente -->
         <h2 class="text-lg text-white sm:text-2xl font-bold">Más artículos</h2>
         <div class="relative">
