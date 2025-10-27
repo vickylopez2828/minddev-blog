@@ -8,3 +8,6 @@
   display: none;             /* Chrome, Safari y Opera */
 }
 
+#mobile-index-container {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}

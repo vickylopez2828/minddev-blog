@@ -20,8 +20,8 @@
     font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.2;
+    max-width: none;
 }
-
 #article-container h2 {
     color: #ffffff;
     font-size: 1.75rem;
@@ -306,6 +306,7 @@
 @media (max-width: 768px) {
     #article-container h1 {
         font-size: 2rem;
+        max-width: 320px;
     }
     
     #article-container h2 {
