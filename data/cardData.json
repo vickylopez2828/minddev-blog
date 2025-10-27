@@ -46,20 +46,11 @@
     },
     {
         "id":6,
-        "title":"Las Aplicaciones Web",
+        "title":"Las Aplicaciones Web, últimas tendencias",
         "icon":"file-text",
         "category":"Desarrollo móvil",
         "datetime":"05 dic 2025",
         "readingTime":"7 min.",
         "link": "?id=2"
-    },
-    {
-        "id":7,
-        "title":"Últimas tendencias web",
-        "icon":"trending-up",
-        "category":"Desarrollo móvil",
-        "datetime":"05 dic 2025",
-        "readingTime":"7 min.",
-        "link": "?id=1"
     }
 ]

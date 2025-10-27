@@ -32,7 +32,9 @@ async function fetchArticleData(articleId) {
     if (typeof generateArticleIndex === 'function') {
         generateArticleIndex();
     }
-    
+    if (typeof updateCommentsForArticle === 'function') {
+        updateCommentsForArticle(articleId);
+    }
     window.scrollTo({ top: 0, behavior: "smooth" });
   } catch (error) {
     console.error("Error fetching data:", error);
