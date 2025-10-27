@@ -30,8 +30,12 @@ const FAKE_COMMENTS = [
     articleId: 3
   }
 ];
-const urlParams = new URLSearchParams(window.location.search);
-const articleId = parseInt(urlParams.get("id")) || 1;
+//  FUNCIÓN PARA OBTENER ID DINÁMICAMENTE
+function getCurrentArticleId() {
+  const urlParams = new URLSearchParams(window.location.search);
+  return parseInt(urlParams.get("id")) || 1;
+}
+
 // Obtener todos los comentarios
 function getComments(articleId) {
   const saved = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
@@ -133,12 +137,20 @@ function renderComments(articleId, limit = 2) {
 let currentLimit = 2;
 function showMoreComments(articleId) {
   currentLimit += 3;
-  renderComments(articleId, currentLimit);
+  renderComments(getCurrentArticleId(), currentLimit);
 }
 
 
+// FUNCIÓN PARA ACTUALIZAR DESDE index.js 
+function updateCommentsForArticle(newArticleId) {
+  currentLimit = 2;
+  renderComments(newArticleId, currentLimit);
+}
+// Hacer función global
+window.updateCommentsForArticle = updateCommentsForArticle;
+
 // Inicializar
-renderComments(articleId);
+renderComments(getCurrentArticleId());
 
 // Manejar formulario
 document.getElementById('comment-form').addEventListener('submit', (e) => {
@@ -152,110 +164,15 @@ document.getElementById('comment-form').addEventListener('submit', (e) => {
     error.classList.remove("hidden");
     return;
   }
-  
-  addComment(articleId, text);
+  const currentArticleId = getCurrentArticleId();
+  addComment(currentArticleId, text);
   textarea.value = '';
   error.classList.add('hidden')
   currentLimit = 2; 
-  renderComments(articleId, currentLimit);
+  renderComments(currentArticleId, currentLimit);
   
   // Scroll suave al nuevo comentario
-  document.getElementById('comments-container').scrollIntoView({ 
-    behavior: 'smooth' 
-  });
+  // document.getElementById('comments-container').scrollIntoView({ 
+  //   behavior: 'smooth' 
+  // });
 });
-
-// const STORAGE_KEY = 'blogComments';
-
-// const FAKE_COMMENTS = [
-//   {
-//     id: 1,
-//     author: 'Juana Rabuffetti',
-//     date: new Date('2025-10-25T14:30:00'),
-//     text: 'Me encanto este articulo, muy completo y cierto.',
-//     likes: 1,
-//     dislikes: 1,
-//     articleId: 1
-//   },
-//   {
-//     id: 2,
-//     author: 'Carlos Mendoza',
-//     date: new Date('2025-10-24T10:15:00'),
-//     text: '¡Muy útil! Justo lo que necesitaba para mi proyecto.',
-//     likes: 3,
-//     dislikes: 0,
-//     articleId: 2
-//   },
-//   {
-//     id: 3,
-//     author: 'Ana López',
-//     date: new Date('2025-10-23T16:45:00'),
-//     text: 'Excelente explicación, gracias por compartir.',
-//     likes: 2,
-//     dislikes: 0,
-//     articleId: 3
-//   }
-// ];
-// // Obtener todos los comentarios, los fakes + los del localstorage
-// function getComments(articleId) {
-//   const saved = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
-//   const localComments = saved[articleId] || [];
-//   const fakeComments = FAKE_COMMENTS.filter(c => c.articleId === articleId);
-  
-//   return [...fakeComments, ...localComments]
-//     .sort((a, b) => new Date(b.date) - new Date(a.date));
-// }
-
-// const addComment = (articleId, text) =>{
-//     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
-//     if (!saved[articleId]) saved[articleId] = [];
-//     const newComment = {
-//         id: Date.now(),
-//         author: 'Tú',
-//         date: new Date(),
-//         text: text,
-//         likes: 0,
-//         dislikes: 0
-//     }
-//     saved[articleId].push(newComment);
-//     localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
-//     console.log(saved)
-// }
-
-// function renderComment(articleId){
-//   const comments = getComments(articleId);
-//   console.log(comments)
-//   const author = document.getElementById("comment-author");
-//   const time = document.getElementById("comment-time");
-//   const text = document.getElementById("comment-text");
-//   const likes = document.getElementById("comment-likes");
-//   const dislikes = document.getElementById("comment-dislikes");
-
-//   comments.map(comment =>{
-//     author.innerHTML = comment.author
-//   })
-
-
-// }
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const urlParams = new URLSearchParams(window.location.search);
-//   const articleId = parseInt(urlParams.get("id")) || 1;
-//   document.getElementById("comment-form").addEventListener('submit', (e) =>{
-//     e.preventDefault();
-//     const textArea = document.getElementById("comment");
-//     const comment = textArea.value.trim();
-//     const error = document.getElementById("comment-error");
-//     if(!comment) {
-//         error.classList.remove("hidden");
-//         return;
-//     }
-//     console.log(comment);
-    
-//     addComment(articleId, comment);
-//     textArea.value = '';
-//     error.classList.add("hidden");
-//     renderComment(articleId);
-//   });
-//   renderComment(articleId);
-// });
