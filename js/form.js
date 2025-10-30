@@ -43,7 +43,7 @@ function getComments(articleId) {
   const fakeComments = FAKE_COMMENTS.filter(c => c.articleId === articleId);
   
   return [...fakeComments, ...localComments]
-    .sort((a, b) => new Date(b.date) - new Date(a.date));
+    .sort((a, b) => new Date(b.date) - new Date(a.date));//ordena de mas nuevo a mas viejo
 }
 
 // Agregar comentario
@@ -146,7 +146,7 @@ function updateCommentsForArticle(newArticleId) {
   currentLimit = 2;
   renderComments(newArticleId, currentLimit);
 }
-// Hacer función global
+// Hacer función global, es accesible desde otro script
 window.updateCommentsForArticle = updateCommentsForArticle;
 
 // Inicializar
