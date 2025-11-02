@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Eventos de clic en las flechas
     btnNext.addEventListener("click", () => {
+        //mueve a la derecha
         slideContainer.scrollBy({   
             left: scrollAmount,
             behavior: 'smooth'
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     btnPrev.addEventListener("click", () => {
+        //mueve a la izquierda
         slideContainer.scrollBy({ 
             left: -scrollAmount,
             behavior: 'smooth'
