@@ -149,29 +149,26 @@
       .mobile-index-container::-webkit-scrollbar {
         display: none;
       }
- 
+
       body {
         overflow-x: clip !important;
         overflow-y: auto !important;
         /* O simplemente: */
         overflow: visible !important;
       }
-      #article-index {
-        position: sticky;
-        top: 270px;
+
+      #index-list {
         height: auto;
       }
-      #index-list{
-        height: auto;
-      }
-    
     </style>
   </head>
 
-  <body class="bg-deep-blue text-white-pure font-[Inter] max-w-screen-2xl mx-auto">
+  <body
+    class="bg-deep-blue text-white-pure font-[Inter] max-w-screen-2xl mx-auto"
+  >
     <!-- Header -->
     <header
-      class="sticky top-0 z-40 transition-all duration-300 bg-deep-blue/95 backdrop-blur-sm shadow-lg py-2"
+      class="z-40 transition-all duration-300 bg-deep-blue/95 backdrop-blur-sm shadow-lg py-2"
       id="main-header"
     >
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
@@ -202,20 +199,6 @@
               >Inicio</a
             >
           </div>
-
-          <!-- Btn toggleLanguage -->
-          <div class="relative" id="language-switcher-container">
-            <div
-              class="language-switch"
-              id="lang-switch"
-              data-lang="es"
-              onclick="toggleLanguageSwitch()"
-            >
-              <div class="switch-toggle"></div>
-              <span class="switch-label es-label">ES</span>
-              <span class="switch-label en-label">EN</span>
-            </div>
-          </div>
         </nav>
       </div>
     </header>
@@ -224,19 +207,30 @@
       class="hero-banner w-full h-60 lg:h-96 bg-cover flex flex-col"
       style="background-image: url(/assets/images/hero-banner.png)"
     >
-      <nav id="article-navigation" class="flex justify-between pt-6 w-full px-4 md:px-20">
-        <div class="hover:scale-110 transition-transform flex gap-2 items-center">
+      <nav
+        id="article-navigation"
+        class="flex justify-between pt-6 w-full px-4 md:px-20"
+      >
+        <div
+          class="hover:scale-110 transition-transform flex gap-2 items-center"
+        >
           <img
             class="inline color-electric-blue rotate-180 w-2 md:w-3"
             src="assets/icons/chevron-right.svg"
             alt=""
           />
-          <a id="prev" class="text-electric-blue cursor-pointer pl-2 text-xs sm:text-sm md:text-lg"
+          <a
+            id="prev"
+            class="text-electric-blue cursor-pointer pl-2 text-xs sm:text-sm md:text-lg"
             >Articulo anterior</a
           >
         </div>
-        <div class="hover:scale-110 transition-transform flex gap-2 items-center">
-          <a id="next" class="text-electric-blue cursor-pointer text-xs sm:text-lg"
+        <div
+          class="hover:scale-110 transition-transform flex gap-2 items-center"
+        >
+          <a
+            id="next"
+            class="text-electric-blue cursor-pointer text-xs sm:text-lg"
             >Siguiente articulo</a
           >
           <img
@@ -253,116 +247,111 @@
         <!-- Los elementos del header se generarán dinámicamente aquí -->
       </section>
     </section>
-    
-    <main class="flex flex-col md:flex-row justify-between gap-0 md:gap-7 mt-4 relative">
+
+    <main
+      class="flex flex-col md:flex-row justify-between gap-0 md:gap-7 mt-4 relative"
+    >
       <!-- Índice mobile -->
+      <div
+        id="mobile-index-container"
+        class="sticky top-[0px] w-full z-30 md:hidden bg-dark-alt py-3 px-4 border-b border-electric-blue/20 scrollbar-hide mb-4"
+      >
         <div
-          id="mobile-index-container"
-          class="sticky top-[80px] w-full z-30 md:hidden bg-dark-alt py-3 px-4 border-b border-electric-blue/20 scrollbar-hide mb-4"
+          class="mobile-index-container flex space-x-4 overflow-x-auto scrollbar-hide"
+          id="mobile-index-list"
         >
-          <div
-            class="mobile-index-container flex space-x-4 overflow-x-auto scrollbar-hide"
-            id="mobile-index-list"
-          >
-            <!-- Los ítems del índice se generarán aquí dinámicamente -->
-          </div>
+          <!-- Los ítems del índice se generarán aquí dinámicamente -->
         </div>
-      
+      </div>
+
       <aside
         class="sm:pr-3 md:flex-shrink-0 hidden md:block md:order-2 rounded-xl md:pl-3 md:w-72 mr-4 lg:mr-20 mt-12"
       >
-        <!-- Redes -->
-        <!-- Sección Compartir -->
-        <div
-          class="md:bg-[#151E3C] order-2 absolute right-2 top-[75px] md:sticky md:top-[90px] md:rounded-xl md:pr-6 md:pl-6 md:h-40 md:flex md:flex-col md:justify-center md:items-center md:mb-8"
-        >
-          <p class="text-center mb-6">
-            Comparte este artículo
-          </p>
+        <div class="sticky top-[120px]">
+          <!-- Índice del artículo -->
           <div
-            class=" pt-3 sm:pt-10 sm:pr-1 sm:scale-150 md:flex md:pt-3 md:scale-125 md:justify-center md:pb-2 lg:scale-100 lg:pt-0 lg:items-center"
+            id="article-index"
+            class="bg-[#151E3C] rounded-xl p-6 hidden md:block"
           >
-            <a
-              href="https://www.linkedin.com/company/minddev-peru"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="cursor pointer hover:scale-110 transition-transform"
+            <h3 class="text-lg font-bold text-white-pure mb-4 pb-2">
+              En este articulo
+            </h3>
+            <nav
+              id="index-list"
+              class="space-y-2 overflow-y-auto max-h-72 pr-2"
             >
-              <img
-                class="md:max-w-20 lg:w-14 lg:h-14"
-                src="/assets/icons/share-linkedin.svg"
-                alt=""
-              />
-            </a>
-            <a
-              href="https://x.com/MinddevPeru"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="cursor pointer hover:scale-110 transition-transform"
-            >
-              <img
-                class="md:max-w-20 lg:w-14 lg:h-14"
-                src="/assets/icons/share-x.svg"
-                alt=""
-              />
-            </a>
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=contacto@minddevperu.com&su=Consulta&body=Hola%2C%20quiero%20más%20información."
-              target="_blank"
-              rel="noopener noreferrer"
-              class="cursor pointer hover:scale-110 transition-transform"
-            >
-              <img
-                class="md:max-w-20 lg:w-14 lg:h-14"
-                src="/assets/icons/share-mail.svg"
-                alt=""
-              />
-            </a>
-            <button
-              onclick="sharePage()"
-              class="cursor pointer hover:scale-110 transition-transform"
-            >
-              <img
-                class="md:max-w-20 lg:w-14 lg:h-14"
-                src="assets/icons/share.svg"
-                alt=""
-              />
-            </button>
+              <!-- Índice generado dinámicamente -->
+            </nav>
           </div>
-        </div>
-        <!-- Índice del artículo -->
-        <div
-          id="article-index"
-          class="bg-[#151E3C] rounded-xl p-6 hidden md:block"
-        >
-          <h3
-            class="text-lg font-bold text-white-pure mb-4 border-b border-electric-blue/50 pb-2"
+          <!-- Redes -->
+          <!-- Sección Compartir -->
+          <div
+            class="order-2 right-2 md:rounded-xl md:pr-6 md:pl-6 md:h-40 md:flex md:flex-col md:justify-center md:items-center md:mb-8"
           >
-            Índice del Artículo
-          </h3>
-          <nav id="index-list" class="space-y-2 overflow-y-auto max-h-72 pr-2">
-            <!-- Índice generado dinámicamente -->
-          </nav>
+            <p class="text-center mb-3 text-sm">COMPARTE ESTE ARTÍCULO</p>
+            <div
+              class="pt-3 sm:pt-10 sm:pr-1 sm:scale-150 md:flex md:pt-3 md:scale-125 md:justify-center md:pb-2 lg:scale-100 lg:pt-0 lg:items-center"
+            >
+              <a
+                href="https://www.linkedin.com/company/minddev-peru"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cursor pointer hover:scale-110 transition-transform"
+              >
+                <img
+                  class="md:max-w-20 lg:w-14 lg:h-14"
+                  src="/assets/icons/share-linkedin.svg"
+                  alt=""
+                />
+              </a>
+              <a
+                href="https://x.com/MinddevPeru"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cursor pointer hover:scale-110 transition-transform"
+              >
+                <img
+                  class="md:max-w-20 lg:w-14 lg:h-14"
+                  src="/assets/icons/share-facebook.svg"
+                  alt=""
+                />
+              </a>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=contacto@minddevperu.com&su=Consulta&body=Hola%2C%20quiero%20más%20información."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cursor pointer hover:scale-110 transition-transform"
+              >
+                <img
+                  class="md:max-w-20 lg:w-14 lg:h-14"
+                  src="./assets/icons/share-instagram.svg"
+                  alt=""
+                />
+              </a>
+              <button
+                onclick="sharePage()"
+                class="cursor pointer hover:scale-110 transition-transform"
+              >
+                <img
+                  class="md:max-w-20 lg:w-14 lg:h-14"
+                  src="assets/icons/share-x.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+          </div>
         </div>
       </aside>
       <!-- Redes Mobile-->
-      <div
-        class="order-2 absolute right-2 top-[75px] md:hidden"
-      >
-        <div
-          class=" pt-3"
-        >
+      <div class="order-2 absolute right-2 top-[75px] md:hidden">
+        <div class="pt-3">
           <a
             href="https://www.linkedin.com/company/minddev-peru"
             target="_blank"
             rel="noopener noreferrer"
             class="cursor pointer hover:scale-110 transition-transform"
           >
-            <img
-              class=""
-              src="/assets/icons/share-linkedin.svg"
-              alt=""
-            />
+            <img class="" src="/assets/icons/share-linkedin.svg" alt="" />
           </a>
           <a
             href="https://x.com/MinddevPeru"
@@ -370,11 +359,7 @@
             rel="noopener noreferrer"
             class="cursor pointer hover:scale-110 transition-transform"
           >
-            <img
-              class=""
-              src="/assets/icons/share-x.svg"
-              alt=""
-            />
+            <img class="" src="/assets/icons/share-x.svg" alt="" />
           </a>
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=contacto@minddevperu.com&su=Consulta&body=Hola%2C%20quiero%20más%20información."
@@ -382,21 +367,13 @@
             rel="noopener noreferrer"
             class="cursor pointer hover:scale-110 transition-transform"
           >
-            <img
-              class=""
-              src="/assets/icons/share-mail.svg"
-              alt=""
-            />
+            <img class="" src="/assets/icons/share-mail.svg" alt="" />
           </a>
           <button
             onclick="sharePage()"
             class="cursor pointer hover:scale-110 transition-transform"
           >
-            <img
-              class=""
-              src="assets/icons/share.svg"
-              alt=""
-            />
+            <img class="" src="assets/icons/share.svg" alt="" />
           </button>
         </div>
       </div>
@@ -410,7 +387,10 @@
     </main>
     <section class="lg:px-20">
       <!-- Sección Más Artículos -->
-      <section id="more-articles" class="px-4 sm:px-8 lg:p-0 mx-auto w-full mt-4 sm:mt-6 sm:pr-8">
+      <section
+        id="more-articles"
+        class="px-4 sm:px-8 lg:p-0 mx-auto w-full mt-4 sm:mt-6 sm:pr-8"
+      >
         <!-- Aquí se insertarán los artículos relacionados dinámicamente -->
         <h2 class="text-lg text-white sm:text-2xl font-bold">Más artículos</h2>
         <div class="relative">
@@ -690,13 +670,17 @@
             <ul class="space-y-2 text-gray-400 text-sm">
               <li data-text-key="footer_link_team">
                 <!-- Completar link hacia el equipo -->
-                <a href="https://minddevperu.com/#equipo" class="hover:text-electric-blue transition"
+                <a
+                  href="https://minddevperu.com/#equipo"
+                  class="hover:text-electric-blue transition"
                   >Conoce al Equipo</a
                 >
               </li>
               <li data-text-key="footer_link_alliances">
                 <!-- Completar link hacia alianzas -->
-                <a href="https://minddevperu.com/#alianzas" class="hover:text-electric-blue transition"
+                <a
+                  href="https://minddevperu.com/#alianzas"
+                  class="hover:text-electric-blue transition"
                   >Nuestras Alianzas</a
                 >
               </li>
@@ -732,31 +716,41 @@
             <ul class="space-y-2 text-gray-400 text-sm">
               <li data-text-key="footer_link_web">
                 <!-- Completar link hacia servicios -->
-                <a href="https://minddevperu.com/#servicios" class="hover:text-electric-blue transition"
+                <a
+                  href="https://minddevperu.com/#servicios"
+                  class="hover:text-electric-blue transition"
                   >Desarrollo Web</a
                 >
               </li>
               <li data-text-key="footer_link_mobile">
                 <!-- Completar link hacia servicios -->
-                <a href="https://minddevperu.com/#servicios" class="hover:text-electric-blue transition"
+                <a
+                  href="https://minddevperu.com/#servicios"
+                  class="hover:text-electric-blue transition"
                   >Aplicaciones Móviles</a
                 >
               </li>
               <li data-text-key="footer_link_mvp">
                 <!-- Completar link hacia servicios -->
-                <a href="https://minddevperu.com/#servicios" class="hover:text-electric-blue transition"
+                <a
+                  href="https://minddevperu.com/#servicios"
+                  class="hover:text-electric-blue transition"
                   >Desarrollo MVP</a
                 >
               </li>
               <li data-text-key="footer_link_seo">
                 <!-- Completar link hacia servicios -->
-                <a href="https://minddevperu.com/#servicios" class="hover:text-electric-blue transition"
+                <a
+                  href="https://minddevperu.com/#servicios"
+                  class="hover:text-electric-blue transition"
                   >SEO y Marketing</a
                 >
               </li>
               <li data-text-key="footer_link_faq">
                 <!-- Completar link hacia faq -->
-                <a href="https://minddevperu.com/#faq" class="hover:text-electric-blue transition"
+                <a
+                  href="https://minddevperu.com/#faq"
+                  class="hover:text-electric-blue transition"
                   >Preguntas Frecuentes</a
                 >
               </li>
@@ -774,13 +768,17 @@
             <ul class="space-y-2 text-gray-400 text-sm">
               <li data-text-key="footer_link_blog">
                 <!-- Completar link hacia Tecnologias -->
-                <a href="https://minddevperu.com/#" class="hover:text-electric-blue transition"
+                <a
+                  href="https://minddevperu.com/#"
+                  class="hover:text-electric-blue transition"
                   >Blog de Tecnología</a
                 >
               </li>
               <li data-text-key="footer_link_careers">
                 <!-- Completar link hacia oportunidades laborales -->
-                <a href="https://minddevperu.com/#equipo" class="hover:text-electric-blue transition"
+                <a
+                  href="https://minddevperu.com/#equipo"
+                  class="hover:text-electric-blue transition"
                   >Oportunidades Laborales</a
                 >
               </li>
