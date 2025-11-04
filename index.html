@@ -160,6 +160,9 @@
       #index-list {
         height: auto;
       }
+      #index-list {
+        height: auto;
+      }
     </style>
   </head>
 
@@ -203,46 +206,31 @@
       </div>
     </header>
     <!-- Hero -->
-    <section
-      class="hero-banner w-full h-60 lg:h-96 bg-cover flex flex-col"
-      style="background-image: url(/assets/images/hero-banner.png)"
-    >
+    <section class="hero-banner w-full bg-cover flex flex-col">
       <nav
         id="article-navigation"
         class="flex justify-between pt-6 w-full px-4 md:px-20"
       >
-        <div
-          class="hover:scale-110 transition-transform flex gap-2 items-center"
-        >
-          <img
-            class="inline color-electric-blue rotate-180 w-2 md:w-3"
-            src="assets/icons/chevron-right.svg"
-            alt=""
-          />
-          <a
-            id="prev"
-            class="text-electric-blue cursor-pointer pl-2 text-xs sm:text-sm md:text-lg"
+        <div class="hover-group flex gap-2 items-center">
+          <img class="rotate-180" src="assets/icons/chevron-right.svg" alt="" />
+          <a id="prev" class="cursor-pointer pl-2 text-xs sm:text-sm md:text-sm"
             >Articulo anterior</a
           >
         </div>
-        <div
-          class="hover:scale-110 transition-transform flex gap-2 items-center"
-        >
-          <a
-            id="next"
-            class="text-electric-blue cursor-pointer text-xs sm:text-lg"
+        <div class="hover-group flex gap-2 items-center">
+          <a id="next" class="cursor-pointer text-xs sm:text-sm"
             >Siguiente articulo</a
           >
           <img
-            class="inline w-2 md:w-3"
+            class="inline w-2 md:w-2"
             src="assets/icons/chevron-right.svg"
             alt=""
           />
         </div>
       </nav>
-
       <section
-        class="flex justify-center max-w-3xl gap-1 lg:gap-8 mt-auto pb-2 lg:pb-7 text-xs lg:text-sm"
+        id="hero-banner-content"
+        class="flex flex-col w-auto gap-2 lg:gap-8 mt-auto ml-0 lg:ml-20 pb-2 lg:pb-7 text-xs lg:text-sm justify-start items-start pt-14"
       >
         <!-- Los elementos del header se generarán dinámicamente aquí -->
       </section>
@@ -980,7 +968,6 @@
     </footer>
     <script src="./js/metatags.js"></script>
     <script src="./js/form.js"></script>
-    <script src="./js/header-updater.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/card.js"></script>
     <script src="./js/slide.js"></script>

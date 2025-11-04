@@ -191,6 +191,49 @@ function displayArticle(content) {
   });
 }
 
+// En index.js - Agregar esta función
+function updateHeader(articleData) {
+    const heroBannerContent = document.querySelector('#hero-banner-content');
+    if (!heroBannerContent || !articleData) return;
+
+    const { clasification, articleTitle, author, 'date-published': fechaPublicacion, 'time-of-reading': tiempoLectura } = articleData;
+    
+    // Formatear fecha
+    const fecha = new Date(fechaPublicacion);
+    const opciones = { 
+        day: 'numeric', 
+        month: 'long', 
+        year: 'numeric' 
+    };
+    const fechaFormateada = fecha.toLocaleDateString('es-ES', opciones);
+
+    // Actualizar el hero banner
+    heroBannerContent.innerHTML = `
+        <div class="flex items-center gap-2 bg-minddev-primary px-3 py-2 rounded-3xl w-fit">
+            <img src="${clasification.image}" alt="${clasification.title}" class="w-4 h-4 lg:w-5 lg:h-5">
+            <p class="font-semibold ">${clasification.title}</p>
+        </div>
+        <div class="flex">
+            <h1 class="text-2xl lg:text-4xl font-bold text-white">${articleTitle.content}</h1>
+        </div>
+        <div class="flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-3 text-white items-start">
+            <div class="flex items-center gap-3">
+                <img src="${author['image-autor']}" alt="${author['name-author']}" class="w-6 h-6 rounded-full">
+                <span class="text-sm">${author['name-author']}</span>
+                <span class="text-sm hidden lg:inline">|</span>
+                <span class="text-sm hidden lg:inline">Última actualización</span>
+                <span class="text-sm">${fechaFormateada}</span>
+            </div>
+            <div class="flex items-center gap-2 bg-minddev-primary px-3 py-1 rounded-lg w-fit">
+                <img src="./assets/icons/clock-three.svg" alt="Tiempo de lectura" class="w-4 h-4">
+                <span class="text-sm text-white">${tiempoLectura}</span>
+            </div>
+        </div>
+    `;
+}
+
+// Hacerla disponible globalmente
+window.updateHeader = updateHeader;
 window.addEventListener("popstate", (event) => {
   if (event.state && event.state.articleId) {
     fetchArticleData(event.state.articleId);
