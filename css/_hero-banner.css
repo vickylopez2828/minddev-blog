@@ -26,3 +26,42 @@
     position: relative;
     z-index: 2;
 }
+
+.hover-group {
+  transition: all 0.3s ease;
+}
+
+.hover-group:hover {
+  transform: scale(1.1);
+}
+
+.hover-group:hover img {
+  filter: none; /* Icono azul en hover */
+}
+
+.hover-group:hover a {
+  color: #3B82F6; /* Texto azul en hover */
+}
+
+/* Estilos base */
+.hover-group img {
+  filter: brightness(0) invert(1); /* Icono blanco por defecto */
+  transition: filter 0.3s ease;
+}
+
+.hover-group a {
+  color: white; /* Texto blanco por defecto */
+  transition: color 0.3s ease;
+}
+
+.bg-custom-blue {
+    background-color: #3B82F6;
+}
+
+.bg-minddev-primary {
+    background-color: #0f1a37;
+    padding: 8px 13px 8px 15px;
+    border-radius: 24px;
+    font-size: 12px;
+    color: #3B82F6;
+}
