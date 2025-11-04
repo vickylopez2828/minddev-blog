@@ -19,17 +19,21 @@
             "title": "SEO & MARKETING"
         },
         "date-published": "2024-05-10T00:00:00",
-        "time-of-reading": "6 minutos",
+        "time-of-reading": "6 minutos de lectura",
         "navigation": {
             "prev": null,
             "next": 2
         },
-        "articleContent": [
-            {
+        "author":{
+            "image-autor": "./assets/images/claudia-nieves.jpg",
+            "name-author": "Claudia Nieves"
+        },
+        "articleTitle": {
                 "id": "heading_one",
                 "tag": "h1",
                 "content": "5 tendencias de SEO que debes dominar en 2025"
             },
+        "articleContent": [
             {
                 "id": "heading_two",
                 "tag": "h2",
@@ -234,17 +238,21 @@
             "title": "DESARROLLO MÓVIL"
         },
         "date-published": "2024-03-25T00:00:00",
-        "time-of-reading": "8 minutos",
+        "time-of-reading": "8 minutos de lectura",
         "navigation": {
             "prev": 1,
             "next": 3
         },
-        "articleContent": [
-            {
+        "author":{
+            "image-autor": "./assets/images/claudia-nieves.jpg",
+            "name-author": "Claudia Nieves"
+        },
+        "articleTitle": {
                 "id": "heading_one",
                 "tag": "h1",
-                "content": "**Flutter vs. Nativo: ¿Cuál elegir para tu App?**"
-            },
+                "content": "Flutter vs. Nativo: ¿Cuál elegir para tu App?"
+        },
+        "articleContent": [
             {
                 "id": "heading_two",
                 "tag": "h2",
@@ -516,18 +524,22 @@
             "image": "./assets/icons/code.svg",
             "title": "METODOLOGÍA"
         },
-        "time-of-reading": "12 minutos",
+        "time-of-reading": "12 minutos de lectura",
         "date-published": "2025-03-07T00:00:00",
         "navigation": {
             "prev": 2,
             "next": null
         },
-        "articleContent": [
-            {
+        "author":{
+            "image-autor": "./assets/images/claudia-nieves.jpg",
+            "name-author": "Claudia Nieves"
+        },
+        "articleTitle": {
                 "id": "heading_one",
                 "tag": "h1",
-                "content": "**Cómo implementamos la Metodología Ágil en MindDev**"
-            },
+                "content": "Cómo implementamos la Metodología Ágil en MindDev"
+        },
+        "articleContent": [
             {
                 "id": "heading_two",
                 "tag": "h2",

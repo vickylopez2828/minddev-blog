@@ -1,105 +1,65 @@
-// js/header-updater.js
-function updateHeader(articleData) {
-    try {
-        // Actualizar banner del header
-        const heroBanner = document.querySelector('.hero-banner');
-        if (heroBanner && articleData['header-banner']) {
-            const bannerPath = `${articleData['header-banner']}.png`;
-            heroBanner.style.backgroundImage = `url(${bannerPath})`;
-            
-            // Precargar imagen para evitar flickering
-            preloadImage(bannerPath);
-        }
+const heroBannerContent = document.querySelector('#hero-banner-content');
 
-        // Actualizar información del artículo
-        updateArticleInfo(articleData);
+async function cargarDatosBlog() {
+    try {
+        const respuesta = await fetch('../data/data.json');
+        
+        if (!respuesta.ok) {
+            throw new Error('No se pudo cargar el archivo JSON');
+        }
+        
+        const datos = await respuesta.json();
+        return datos;
     } catch (error) {
-        console.error('Error updating header:', error);
+        console.error('Error cargando el blog:', error);
+        return null;
     }
 }
 
-function updateArticleInfo(articleData) {
-    const infoContainer = document.querySelector('.hero-banner section:last-child');
-    if (!infoContainer) {
-        console.warn('Info container not found');
-        return;
-    }
-
-    try {
-        // Limpiar contenido existente
-        infoContainer.innerHTML = '';
-
-        // Crear elementos solo si los datos existen
-        const items = [];
-
-        if (articleData.clasification) {
-            items.push(createInfoItem(
-                articleData.clasification.image,
-                articleData.clasification.title,
-                'clasification'
-            ));
-        }
-
-        if (articleData['date-published']) {
-            items.push(createInfoItem(
-                './assets/icons/calendar.svg',
-                formatDate(articleData['date-published']),
-                'date'
-            ));
-        }
-
-        if (articleData['time-of-reading']) {
-            items.push(createInfoItem(
-                './assets/icons/clock-three.svg',
-                articleData['time-of-reading'],
-                'time'
-            ));
-        }
-
-        // Agregar todos los items al container
-        items.forEach(item => infoContainer.appendChild(item));
-
-    } catch (error) {
-        console.error('Error updating article info:', error);
-    }
-}
-
-function createInfoItem(iconSrc, text, type) {
-    const div = document.createElement('div');
-    const baseClasses = 'flex bg-accent-purple p-1 lg:p-5 gap-2 lg:gap-4 rounded-full items-center scale-90 justify-center';
+// Función para mostrar la clasificación en el hero banner
+async function mostrarClasificacionEnHero() {
+    const datos = await cargarDatosBlog();
     
-    // Ajustar ancho según el tipo de información
-    const widthClasses = {
-        'clasification': 'w-44 lg:w-52',
-        'date': 'w-40 lg:w-44',
-        'time': 'w-48 lg:w-48'
+    if (!datos || !datos[0]) return;
+    
+    const primerArticulo = datos[0];
+    const clasificacion = primerArticulo.clasification;
+    const titulo = primerArticulo.articleTitle.content; 
+    const authorImage = primerArticulo.author['image-autor'];
+    const authorName = primerArticulo.author['name-author'];
+    const fechaPublicacion = new Date(primerArticulo['date-published']);
+    const opciones = { 
+        day: 'numeric', 
+        month: 'long', 
+        year: 'numeric' 
     };
-
-    div.className = `${baseClasses} ${widthClasses[type]}`;
-
-    div.innerHTML = `
-        <img class="size-7" src="${iconSrc}" alt="${type}" />
-        <p class="text-xs lg:text-sm">${text}</p>
+    const fechaFormateada = fechaPublicacion.toLocaleDateString('es-ES', opciones);
+    const tiempoLectura = primerArticulo['time-of-reading'];
+    
+        // Crear el HTML para la clasificación
+    heroBannerContent.innerHTML = `
+        <div class="flex items-center gap-2 bg-minddev-primary px-3 py-2 rounded-3xl w-fit">
+            <img src="${clasificacion.image}" alt="${clasificacion.title}" class="w-4 h-4 lg:w-5 lg:h-5">
+            <p class="font-semibold text-white">${clasificacion.title}</p>
+        </div>
+        <div class="flex">
+            <h1 class="text-2xl lg:text-4xl font-bold text-white">${titulo}</h1>
+        </div>
+        <div class="flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-3 text-white items-start">
+            <div class="flex items-center gap-3">
+                <img src="${authorImage}" alt="${authorName}" class="w-6 h-6 rounded-full">
+                <span class="text-sm">${authorName}</span>
+                <span class="text-sm hidden lg:inline">|</span>
+                <span class="text-sm hidden lg:inline">Última actualización</span>
+                <span class="text-sm">${fechaFormateada}</span>
+            </div>
+            <div class="flex items-center gap-2 bg-minddev-primary px-3 py-1 rounded-lg w-fit">
+                <img src="./assets/icons/clock-three.svg" alt="Tiempo de lectura" class="w-4 h-4">
+                <span class="text-sm text-white">${tiempoLectura}</span>
+            </div>
+        </div>
     `;
-
-    return div;
 }
 
-function formatDate(dateString) {
-    try {
-        const date = new Date(dateString);
-        const options = { day: 'numeric', month: 'short', year: 'numeric' };
-        return date.toLocaleDateString('es-ES', options);
-    } catch (error) {
-        console.error('Error formatting date:', error);
-        return dateString;
-    }
-}
-
-function preloadImage(src) {
-    const img = new Image();
-    img.src = src;
-}
-
-// Hacer la función disponible globalmente
-window.updateHeader = updateHeader;
+// Llamar la función
+mostrarClasificacionEnHero();
