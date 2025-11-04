@@ -75,15 +75,6 @@
                 ]
             },
             {
-                "id": "tip_minddev",
-                "icon": {
-                    "content": "./assets/icons/magnet.svg",
-                    "tag": "img"
-                },
-                "tag": "aside",
-                "content": "crea contenido que responda directamente a preguntas comunes con subtítulos tipo “¿Cómo...?”, “¿Por qué...?” y “¿Cuál es la mejor forma de...?"
-            },
-            {
                 "id": "heading_two",
                 "tag": "h2",
                 "content": "2. La experiencia del usuario (UX) se consolida como factor de ranking"
@@ -143,15 +134,6 @@
                 ]
             },
             {
-                "id": "tip_minddev",
-                "icon": {
-                    "content": "./assets/icons/file-text.svg",
-                    "tag": "img"
-                },
-                "tag": "aside",
-                "content": "Estructura tus textos con marcado Schema FAQ para que los motores lean tus respuestas con precisión."
-            },
-            {
                 "id": "heading_two",
                 "tag": "h2",
                 "content": "4. Contenido generado con IA, pero supervisado por humanos"
@@ -175,15 +157,6 @@
                     "Revisa la información, agrega datos reales y experiencias propias.",
                     "Aporta tu voz y conocimiento del sector."
                 ]
-            },
-            {
-                "id": "tip_minddev",
-                "icon": {
-                    "content": "./assets/icons/indifferent-square.svg",
-                    "tag": "img"
-                },
-                "tag": "aside",
-                "content": "Combina IA + revisión humana = contenido escalable y de calidad."
             },
             {
                 "id": "heading_two",
