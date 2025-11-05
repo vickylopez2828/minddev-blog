@@ -471,56 +471,45 @@
       <!-- Sección Newsletter -->
       <section
         id="newsletter"
-        class="mx-4 sm:mx-0 min-w-[370px] border-accent-purple border-4 rounded-[20px] px-6 sm:px-8 py-5 sm:py-8 flex flex-col gap-8 sm:gap-12 my-8 sm:my-12"
-      >
-        <h2 class="font-bold text-2xl sm:text-[26px] text-white">
-          Suscríbete a nuestro Newsletter
-        </h2>
-        <p class="text-xs sm:text-[22px] font-normal leading-6 sm:leading-8">
-          Recibe las últimas novedades de MindDev y mantente informado acerca de
-          las últimas tendencias en tecnología, innovaciones de software y
-          consejos de desarrollo.
-        </p>
-        <form
-          class="flex flex-col gap-4 w-full sm:max-w-[600px] mx-auto mb-10 sm:mb-16"
-          id="form-newsletter"
-        >
-          <div class="flex flex-col sm:flex-row gap-4 w-full">
-            <div class="flex items-center gap-4 relative w-full">
-              <input
-                id="input-email"
-                type="email"
-                class="px-5 py-[10px] shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] rounded-[40px] bg-accent-purple/10 w-full placeholder:text-[14px] sm:placeholder:text-lg placeholder:text-white placeholder:pl-8 peer"
-                placeholder="Tu dirección de email"
-              />
-              <img
-                src="./assets/icons/envelope.svg"
-                alt="icono email"
-                class="w-6 mr-3 mb-4 absolute top-1/2 -translate-y-1/2 left-5 pointer-events-none transition-opacity peer-[:not(:placeholder-shown)]:opacity-0"
-              />
-            </div>
+        class="mx-4 min-w-[370px] max-w-[955px] border-accent-purple border-2 rounded-[20px] px-6 sm:px-12 py-8 sm:py-10 flex flex-col my-8 sm:my-12"
+      > 
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-8 sm:gap-12 mb-8">
+          <div class="flex flex-col gap-4 sm:max-w-md">
+            <img src="./assets/icons/notifications_active.svg" alt="notification" class="w-8 h-8 sm:w-10 sm:h-10">
+            <h2 class="font-bold text-xl sm:text-2xl text-white">
+              Suscríbete a nuestro <span class="text-electric-blue">Newsletter</span>
+            </h2>
+            <p class="text-sm sm:text-base font-normal">
+              Y recibe novedades primero
+            </p>
+          </div>
+          <form
+            class="flex flex-col gap-4 w-full sm:w-auto sm:min-w-[300px] mt-4 sm:mt-10"
+            id="form-newsletter"
+          >
+            <input
+              id="input-email"
+              type="email"
+              class="placeholder:text-sm sm:placeholder:text-base placeholder:text-[#8F9DA2] w-full px-0 py-2 border-b-2 border-electric-blue bg-transparent text-white focus:outline-none"
+              placeholder="Ingresa tu dirección de email"
+            />
             <button
               type="submit"
-              class="p-[10px] shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] rounded-[40px] bg-electric-blue w-full font-bold text-base sm:text-xl hover:bg-accent-purple transition duration-200 sm:max-w-40"
+              class="w-full px-6 py-3 shadow-[0_4px_15px_5px_rgba(0,0,0,0.25)] rounded-lg bg-electric-blue font-bold text-base sm:text-lg hover:bg-accent-purple transition duration-200"
             >
               Suscribirse
             </button>
-          </div>
-          <span class="text-[11px] sm:text-base mt-2"
-            >Al suscribir, aceptas nuestras
-            <a
-              href="#"
-              class="text-electric-blue underline text-[11px] sm:text-base text-center cursor-pointer"
-              >Políticas de Privacidad</a
-            >
-            y
-            <a
-              class="text-electric-blue underline text-[11px] sm:text-base text-center cursor-pointer"
-              >Términos y Condiciones</a
-            ></span
-          >
-        </form>
+          </form>
+        </div>
+
+        <p class="text-[11px] sm:text-sm text-center sm:text-right">
+          Al suscribir, aceptas nuestras
+          <a href="#" class="text-electric-blue underline cursor-pointer">Políticas de Privacidad</a>
+          y
+          <a href="#" class="text-electric-blue underline cursor-pointer">Términos y Condiciones</a>
+        </p>
       </section>
+
     </section>
     <!-- Footer -->
     <footer
