@@ -230,14 +230,14 @@
       </nav>
       <section
         id="hero-banner-content"
-        class="flex flex-col w-auto gap-2 lg:gap-8 mt-auto ml-0 lg:ml-20 pb-2 lg:pb-7 text-xs lg:text-sm justify-start items-start pt-14"
+        class="flex flex-col w-auto px-4 sm:px-6 md:px-8 lg:px-0 gap-2 lg:gap-8 mt-auto ml-0 lg:ml-20 pb-2 lg:pb-7 text-xs lg:text-sm pt-8 sm:pt-14"
       >
         <!-- Los elementos del header se generarán dinámicamente aquí -->
       </section>
     </section>
 
     <main
-      class="flex flex-col md:flex-row justify-between gap-0 md:gap-7 mt-4 relative"
+      class="flex flex-col md:flex-row justify-between gap-0 md:gap-7 mt-4"
     >
       <!-- Índice mobile -->
       <div
@@ -282,7 +282,8 @@
             >
               <a
                 href="https://www.linkedin.com/company/minddev-peru"
-                class="text-gray-400 hover:text-accent-purple transition-transform duration-300 hover:scale-110"
+                target="_blank"
+                class="bg-minddev-primary p-2 rounded-lg shadow-[0_4px_10px_1px_rgba(0,0,0,0.25)] text-white hover:text-electric-blue transition-transform duration-300 hover:scale-110"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -290,7 +291,7 @@
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  stroke-width="2"
+                  stroke-width="1"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 >
@@ -301,14 +302,15 @@
               </a>
               <a
                 href="https://www.facebook.com/minddev.peru"
-                class="text-gray-400 hover:text-accent-purple transition-transform duration-300 hover:scale-110"
+                target="_blank"
+                class="bg-minddev-primary p-2 rounded-lg shadow-[0_4px_10px_1px_rgba(0,0,0,0.25)] text-white hover:text-electric-blue transition-transform duration-300 hover:scale-110"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
+                  stroke-width="1"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   class="w-8 h-8"
@@ -318,14 +320,15 @@
               </a>
               <a
                 href="https://www.instagram.com/minddevperu/"
-                class="text-gray-400 hover:text-accent-purple transition-transform duration-300 hover:scale-110"
+                target="_blank"
+                class="bg-minddev-primary p-2 rounded-lg shadow-[0_4px_10px_1px_rgba(0,0,0,0.25)] text-white hover:text-electric-blue transition-transform duration-300 hover:scale-110"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
+                  stroke-width="1"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   class="w-8 h-8"
@@ -336,13 +339,14 @@
                 </svg>
               </a>
               <a href="https://x.com/MinddevPeru"
-                class="text-gray-400 hover:text-accent-purple transition-transform duration-300 hover:scale-110">
+                target="_blank"
+                class="bg-minddev-primary p-2 rounded-lg shadow-[0_4px_10px_1px_rgba(0,0,0,0.25)] text-white hover:text-electric-blue transition-transform duration-300 hover:scale-110">
                 <svg xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     class="w-8 h-8"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
+                    stroke-width="1"
                     stroke-linecap="round"
                     stroke-linejoin="round">
                   <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6
@@ -357,7 +361,7 @@
       </aside>
       <!-- Contenido principal del blog -->
       <article
-        class="w-full md:w-[856px] md:order-1 lg:w-[1050px] px-4 lg:pl-20 lg:pt-14 p-4 sm:p-8"
+        class="w-full md:w-[856px] md:order-1 lg:w-[1050px] lg:pl-20 px-4 sm:px-8 relative"
         id="article-container"
       >
         <!-- Aquí se insertará el contenido dinámicamente -->
@@ -388,7 +392,7 @@
           </button>
           <div
             id="articles-container"
-            class="flex gap-1 sm:gap-4 overflow-x-auto scroll-smooth sm:overflow-x-hidden"
+            class="flex flex-col sm:flex-row gap-1 sm:gap-4 overflow-x-auto scroll-smooth sm:overflow-x-hidden"
           ></div>
         </div>
         <article
