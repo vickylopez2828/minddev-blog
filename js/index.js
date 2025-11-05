@@ -210,23 +210,52 @@ function updateHeader(articleData) {
     // Actualizar el hero banner
     heroBannerContent.innerHTML = `
         <div class="flex items-center gap-2 bg-minddev-primary px-3 py-2 rounded-3xl w-fit">
-            <img src="${clasification.image}" alt="${clasification.title}" class="w-4 h-4 lg:w-5 lg:h-5">
-            <p class="font-semibold ">${clasification.title}</p>
+            <img src="${clasification.image}" alt="${clasification.title}" class="w-4 h-4 lg:w-5 lg:h-5 text-electric-blue">
+            <p class="font-semibold text-electric-blue">${clasification.title}</p>
         </div>
         <div class="flex">
             <h1 class="text-2xl lg:text-4xl font-bold text-white">${articleTitle.content}</h1>
         </div>
-        <div class="flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-3 text-white items-start">
-            <div class="flex items-center gap-3">
+        <div class="flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-3 text-white">
+            <div class="flex items-center gap-1 sm:gap-3">
                 <img src="${author['image-autor']}" alt="${author['name-author']}" class="w-6 h-6 rounded-full">
-                <span class="text-sm">${author['name-author']}</span>
-                <span class="text-sm hidden lg:inline">|</span>
-                <span class="text-sm hidden lg:inline">Última actualización</span>
-                <span class="text-sm">${fechaFormateada}</span>
+                <span class="text-[11px] sm:text-sm">${author['name-author']}</span>
+                <span class="text-[11px] sm:text-sm lg:inline">|</span>
+                <span class="text-[11px] sm:text-sm lg:inline">Última actualización</span>
+                <span class="text-[11px] sm:text-sm">${fechaFormateada}</span>
             </div>
-            <div class="flex items-center gap-2 bg-minddev-primary px-3 py-1 rounded-lg w-fit">
-                <img src="./assets/icons/clock-three.svg" alt="Tiempo de lectura" class="w-4 h-4">
-                <span class="text-sm text-white">${tiempoLectura}</span>
+            <div class="flex justify-between">
+              <div class="flex items-center gap-2 bg-minddev-primary px-3 py-1 rounded-lg w-fit">
+                  <img src="./assets/icons/clock-three.svg" alt="Tiempo de lectura" class="w-4 h-4">
+                  <span class="text-[10px] sm:text-sm text-white">${tiempoLectura}</span>
+              </div>
+              <div class="ml-3 flex items-center gap-1 md:hidden">
+                  <a href="https://www.linkedin.com/company/minddev-peru" target="_black" class="bg-minddev-primary p-2 rounded-lg shadow-[0_4px_10px_1px_rgba(0,0,0,0.25)] text-white hover:text-electric-blue transition-transform duration-300 hover:scale-110">
+                  <!-- linkedin svg pequeño -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                      <rect width="4" height="12" x="2" y="9"></rect>
+                      <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                  </a>
+                  <a href="https://www.facebook.com/minddev.peru" target="_black" class="bg-minddev-primary p-2 rounded-lg shadow-[0_4px_10px_1px_rgba(0,0,0,0.25)] text-white hover:text-electric-blue transition-transform duration-300 hover:scale-110">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                  </svg>
+                  </a>
+                  <a href="https://www.instagram.com/minddevperu/" target="_black" class="bg-minddev-primary p-2 rounded-lg shadow-[0_4px_10px_1px_rgba(0,0,0,0.25)] text-white hover:text-electric-blue transition-transform duration-300 hover:scale-110">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                  </svg>
+                  </a>
+                  <a href="https://x.com/MinddevPeru" target="_black" class="bg-minddev-primary p-2 rounded-lg shadow-[0_4px_10px_1px_rgba(0,0,0,0.25)] text-white hover:text-electric-blue transition-transform duration-300 hover:scale-110">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                  </svg>
+                  </a>
+              </div>
             </div>
         </div>
     `;
