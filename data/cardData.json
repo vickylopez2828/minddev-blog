@@ -4,53 +4,30 @@
         "title":"Flutter vs. Nativo: ¿Cuál elegir para tu App?",
         "icon":"mobile",
         "category":"Desarrollo móvil",
-        "datetime":"20 oct 2025",
-        "readingTime":"6 min.",
-        "link": "?id=2"
+        "link": "?id=2",
+        "description": "Comparamos Flutter y desarrollo nativo para ayudarte a elegir la mejor tecnología para tu aplicación móvil según tus objetivos, presupuesto y tiempo de desarrollo."
     },
     {
         "id":2,
         "title":"5 tendencias de SEO que debes dominar en 2025",
         "icon":"trending-up",
-        "category":"Seo & Marketing",
-        "datetime":"15 nov 2025",
-        "readingTime":"8 min.",
-        "link": "?id=1"
+        "category":"Seo y Marketing",
+        "link": "?id=1",
+        "description": "En 2025, el SEO evoluciona hacia la IA conversacional, la búsqueda semántica y la experiencia de usuario. Descubre las 5 tendencias clave para dominar el posicionamiento orgánico."
     },
     {
         "id":3,
         "title":"Cómo implementamos la Metodología Ágil en MindDev",
-        "icon":"file-text",
+        "icon":"chevron-up-down",
         "category":"Metodología",
-        "datetime":"05 dic 2025",
-        "readingTime":"7 min.",
-        "link": "?id=3"
+        "link": "?id=3",
+        "description": "Descubre cómo MindDev Perú aplica la metodología ágil para entregar proyectos eficientes, transparentes y de alto impacto. Conoce nuestro proceso de 5 pasos."
     },
      {
         "id":4,
         "title":"Introducción a la Inteligencia Artificial en el Desarrollo de Software",
         "icon":"mobile",
         "category":"Seo & Marketing",
-        "datetime":"15 nov 2025",
-        "readingTime":"8 min.",
-        "link": "?id=2"
-    },
-    {
-        "id":5,
-        "title":"Mejores Prácticas para la Seguridad en Aplicaciones Web",
-        "icon":"send",
-        "category":"Seguridad",
-        "datetime":"05 dic 2025",
-        "readingTime":"7 min.",
-        "link": "?id=3"
-    },
-    {
-        "id":6,
-        "title":"Las Aplicaciones Web, últimas tendencias",
-        "icon":"file-text",
-        "category":"Desarrollo móvil",
-        "datetime":"05 dic 2025",
-        "readingTime":"7 min.",
         "link": "?id=2"
     }
 ]

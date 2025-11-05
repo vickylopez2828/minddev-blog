@@ -24,17 +24,14 @@ function createCard(data) {
     const cardIcon = card.querySelector(".card-icon");
     const cardCategory = card.querySelector(".card-category");
     const cardTitle = card.querySelector(".card-title");
-    const cardDatetime = card.querySelector(".card-datetime");
-    const cardReadingTime = card.querySelector(".card-reading-time");
+    const cardDescription = card.querySelector(".card-description");
     const cardLink = card.querySelector(".card-link");
     
     cardIcon.src = `/assets/icons/${data.icon}.svg` || "";
     cardIcon.alt = data.title || "Icono del artículo";
     cardCategory.textContent = data.category || "Categoría";
     cardTitle.textContent = data.title || "Título del artículo";
-    cardDatetime.setAttribute("datetime", data.datetimeISO || "");
-    cardDatetime.textContent = `${data.datetime} | ` || "";
-    cardReadingTime.textContent = `${data.readingTime} de lectura` || "";
+    cardDescription.textContent = data.description || "Descripción";
     cardLink.href = data.link || "#";
     
     return card;
