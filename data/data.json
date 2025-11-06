@@ -186,7 +186,7 @@
             {
                 "id": "tip_minddev",
                 "icon": {
-                    "content": "./assets/icons/trending-up.svg",
+                    "content": "./assets/icons/trending-up-icon.svg",
                     "tag": "img"
                 },
                 "tag": "aside",
