@@ -171,7 +171,7 @@ function isSpam(text) {
 function getComments(articleId) {
   const saved = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
   const localComments = saved[articleId] || [];
-  const fakeComments = FAKE_COMMENTS.filter(c => c.articleId === articleId);
+  const fakeComments = FAKE_COMMENTS.slice(0, 2);
   
   return [...fakeComments, ...localComments]
     .sort((a, b) => new Date(b.date) - new Date(a.date));//ordena de mas nuevo a mas viejo
@@ -262,7 +262,7 @@ function renderComments(articleId, limit = 2) {
       </div>
       <div class="flex flex-col gap-2 w-full">
         <!-- seccion de comentario -->
-        <div class="bg-[#0F172A] p-4 rounded-lg shadow-lg border border-gray-700">
+        <div class="bg-[#151E3D] p-4 rounded-lg shadow-lg border-none">
           <div class="flex justify-between items-start mb-2">
             <p class="text-sm font-medium text-white">${comment.author}</p>
             <span class="text-xs text-gray-400">${getTimeAgo(comment.date)}</span>
