@@ -1,4 +1,3 @@
-@import url("./_idioma.css");
 @import url("./_whatsapp.css");
 @import url("./_scrollbar.css");
 @import url("./_indice.css");
@@ -17,3 +16,8 @@ body {
     overflow-x: hidden;
 }
 
+body {
+    overflow-x: clip !important;
+    overflow-y: auto !important;
+    overflow: visible !important;
+}

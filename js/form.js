@@ -256,8 +256,8 @@ function renderComments(articleId, limit = 2) {
     return `
     <div class="flex gap-4 items-start w-full mb-6">
       <div class="flex-shrink-0">
-        <div class="w-10 h-10 rounded-full bg-[#5355DD] flex items-center justify-center">
-          <img src="./assets/icons/user.svg" alt="user" class="w-5 h-5 filter invert" />
+        <div class="w-10 h-10 rounded-full bg-[#151E3D] flex items-center justify-center">
+          <img src="./assets/icons/user.svg" alt="user" class="w-5 h-5" />
         </div>
       </div>
       <div class="flex flex-col gap-2 w-full">
