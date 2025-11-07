@@ -121,26 +121,6 @@
         line-height: 1.6;
       }
 
-      /* Estilos para el índice */
-      #index-list {
-        scrollbar-width: thin;
-        scrollbar-color: #3b82f6 #1e293b;
-      }
-
-      #index-list::-webkit-scrollbar {
-        width: 4px;
-      }
-
-      #index-list::-webkit-scrollbar-track {
-        background: #1e293b;
-        border-radius: 10px;
-      }
-
-      #index-list::-webkit-scrollbar-thumb {
-        background: #3b82f6;
-        border-radius: 10px;
-      }
-
       .mobile-index-container {
         scrollbar-width: none;
         -ms-overflow-style: none;
@@ -148,20 +128,6 @@
 
       .mobile-index-container::-webkit-scrollbar {
         display: none;
-      }
-
-      body {
-        overflow-x: clip !important;
-        overflow-y: auto !important;
-        /* O simplemente: */
-        overflow: visible !important;
-      }
-
-      #index-list {
-        height: auto;
-      }
-      #index-list {
-        height: auto;
       }
     </style>
   </head>
@@ -447,18 +413,18 @@
       <!-- Sección comentarios -->
       <!-- Sección de Comentarios -->
       <div class="mt-12 p-3 md:p-0">
-        <h2 class="text-lg pl-2 md:pl-0  md:text-2xl font-bold text-white mb-6">
+        <h2 class="text-lg pl-2 md:pl-0 md:text-2xl font-bold text-white mb-6">
           Comentarios de los usuarios
         </h2>
 
-        <div class="shadow-2xl p-2 md:p-7 ">
+        <div class="shadow-2xl p-2 md:p-7">
           <!-- Contenedor de comentarios existentes -->
           <div id="comments-container" class="mb-8">
             <!-- Los comentarios se cargan dinámicamente aquí -->
           </div>
 
           <!-- Formulario para agregar comentarios -->
-          <div class="bg-[#0F172A] rounded-lg  border-none">
+          <div class="bg-[#0F172A] rounded-lg border-none">
             <h3 class="text-xl font-semibold text-white mb-4">
               Agrega un comentario
             </h3>
@@ -479,12 +445,12 @@
                 <!-- Avatar del usuario -->
                 <div class="flex-shrink-0">
                   <div
-                    class="w-10 h-10 rounded-full bg-[#5355DD] flex items-center justify-center"
+                    class="w-10 h-10 rounded-full bg-[#151E3D] flex items-center justify-center"
                   >
                     <img
                       src="./assets/icons/user.svg"
                       alt="user"
-                      class="w-5 h-5 filter invert"
+                      class="w-5 h-5"
                     />
                   </div>
                 </div>
@@ -492,7 +458,9 @@
                 <!-- Campos del formulario -->
                 <div class="flex-1 space-y-4">
                   <div>
-                    <label class="inline-block pb-2" for="authorName">Nombre:</label>
+                    <label class="inline-block pb-2" for="authorName"
+                      >Nombre:</label
+                    >
                     <input
                       type="text"
                       id="authorName"
@@ -508,7 +476,9 @@
                   </div>
 
                   <div>
-                    <label class="inline-block pb-2" for="comment">Comentario:</label>
+                    <label class="inline-block pb-2" for="comment"
+                      >Comentario:</label
+                    >
                     <textarea
                       id="comment"
                       placeholder="Deja un comentario"

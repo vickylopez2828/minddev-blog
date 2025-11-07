@@ -594,7 +594,7 @@
             {
                 "id": "tip_minddev",
                 "icon": {
-                    "content": "./assets/icons/user.svg",
+                    "content": "./assets/icons/user-circle.svg",
                     "tag": "img"
                 },
                 "tag": "aside",
